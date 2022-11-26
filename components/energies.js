@@ -142,18 +142,18 @@ const Energ =()=>{
                 const sele =document.querySelector("#selectTagPa").options[prev.index].value;
                 document.querySelector("#selectTagPa").value = sele;
                 prev.PALevels= sele;
-                console.log(sele);
+                // console.log(sele);
                 return prev
             })
         }
-    }, [data?.sex, data?.age, data?.weight, data?.height, data?.methodName])
+    }, [data?.sex, data?.age, data?.weight, data?.height, data?.methodName, data.index])
     
 
     useEffect(()=>{
         if (data?.bmrResult!==0){
              document.getElementById('gen-result-btn').click()
         }
-    },[data?.methodName])
+    },[data?.methodName, data?.bmrResult])
     
     return (
       <main className={styles.main}>
