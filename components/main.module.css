@@ -1,0 +1,33 @@
+.main {
+  min-height: 50vh;
+  padding: 0.5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calcSection{
+  display: flex;
+  flex-direction: column;
+}
+
+.calcSection h3{
+  text-align: center;
+  font-weight: normal;
+}
+
+.calcSection p {
+  margin: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.calcSection p:hover{
+  margin-left: 1.3rem;
+}
+.calcSection hr{
+  margin: -10px 1rem 0 1rem;
+  /* margin-top: -10px; */
+  border: 1px solid rgb(238, 236, 236);
+  width: 100%;
+}

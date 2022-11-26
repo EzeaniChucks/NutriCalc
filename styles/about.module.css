@@ -1,0 +1,25 @@
+.main {
+    /* height: 65vh; */
+}
+.main>div{
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 0.5rem 35px;
+}
+.main>div>p{
+    margin: 0 0 10px 0;
+    text-indent: 3px;
+    color: rgb(75, 75, 75);
+}
+.main>div>h5>span{
+    font-size: 0.6rem;
+}
+@media screen and (min-width:600px){
+    .main{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+}

@@ -1,0 +1,20 @@
+.logoSection{
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0 1rem 0;
+}
+.logoSection h1 {
+  color: #0070f3;
+  margin: 2rem 0 0 0;
+  font-size: 3rem;
+}
+
+.logoSection p {
+    margin: 0;
+    margin-top: -10px;
+    font-size: 1.1rem;
+    margin-right: 70px;
+}

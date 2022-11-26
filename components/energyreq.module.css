@@ -1,0 +1,165 @@
+.main {
+  padding: 0.5rem 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.main>div{
+  width: 50%;
+}
+.main h4{
+  margin: 10px 0 10px 5px;
+  font-size: 0.9rem;
+  font-weight:700;
+  text-align: left;
+}
+.main h4>span{
+  color: red;
+}
+.workArea{
+  display: flex;
+  gap: 6px;
+  justify-content: space-around;
+  border: 1px solid rgb(184, 184, 184);
+  padding: 15px 5px 15px 0;
+  margin: 15px 5px;
+  border-radius: 10px;
+  box-shadow: 1px 5px 10px gray;
+}
+.workArea>p{
+  margin: 0;
+  margin-left: 5px;
+  color: grey;
+}
+.workArea form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.workArea form label{
+  margin: 5px 0;
+}
+.workArea .radios{
+  width: 12px;
+  margin: 0 5px;
+}
+.workArea .radios:nth-of-type(1){
+  margin-right: 30px;
+}
+.workArea button{
+  margin-top: 15px;
+  padding: 4px 10px;
+  letter-spacing: 0.6px;
+  background-color:black;
+  cursor: pointer;
+  color: white;
+  transition: all .2s ease-in;
+}
+
+.workArea button:active{
+  transform: scale(90%);
+}
+.workArea button:hover{
+  background-color: white;
+  color: black;
+}
+.workArea input{
+  width: 3rem;
+  margin-left: 10px;
+  outline: none;
+}
+
+.otherArea{
+  margin: 10px 15px;
+}
+
+.result{
+  text-align: left;
+  margin: 0px 0 10px 5px;
+  color: green;
+  line-height: 25px;
+}
+
+.result span{
+  font-weight: bold;
+  font-size: 1.1rem;
+  background-color: rgb(217, 235, 217);
+  padding: 0 5px;
+}
+.errorInf{
+  text-align: center;
+  color: rgb(231, 42, 8);
+}
+
+.errorInf span{
+  font-weight: bold;
+  font-size: 1.1rem;
+  background-color: rgb(252, 218, 212);
+  padding: 0 5px;
+}
+.warningInf{
+  text-align: center;
+  color: rgb(231, 160, 8);
+}
+
+.warningInf span{
+  font-weight: bold;
+  font-size: 1.1rem;
+  background-color: rgb(252, 218, 212);
+  padding: 0 5px;
+}
+.warningInf .sup{
+  color: green;
+}
+
+.methodContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.methodContainer>p{
+  margin: 0 0 5px 5px;
+  font-size: 0.9rem;
+}
+.methodContainer>p:first-child{
+  margin-top: 20px;
+}
+
+.methodList{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.kid{
+  margin: 2px 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: blue;
+  background-color: rgb(173, 221, 253);
+  padding: 3px 5px;
+}
+.active{
+  background-color: rgb(1, 37, 61);
+  color: white;
+}
+.methodList>h6{
+  margin: 5px 0 0px 5px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: grey;
+}
+.methodList>h6:last-child{
+  color: rgb(1, 37, 61);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.methodList>h6:last-child:hover{
+  color:grey;
+}
+
+@media screen and (max-width:600px){
+  .main>div{
+    width: 100%;
+  }
+}
