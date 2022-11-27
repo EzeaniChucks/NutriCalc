@@ -7,10 +7,10 @@ const Wrapper =({children})=>{
     return (
       <>
         <Head>
-          <title>NutriCalc</title>
+          <title>EnCalc</title>
           <meta
             name="description"
-            content="Get the most accurate estimated enery requirements and more"
+            content="Get the most accurate estimated enery requirements and do much more with Encalc"
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
