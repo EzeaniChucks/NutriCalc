@@ -1,10 +1,9 @@
 .footer {
   display: flex;
   flex-direction: column;
-  background-color: rgb(1, 37, 61);;
+  background-color: rgb(1, 37, 61);
   padding: 10px;
   margin-top: 50px;
-  /* border-top: 1px solid #f86868; */
   align-items: center;
 }
 .footer>h3{

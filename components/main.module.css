@@ -15,15 +15,18 @@
 .calcSection h3{
   text-align: center;
   font-weight: normal;
+  color: rgb(1, 37, 61);
 }
 
 .calcSection p {
   margin: 1rem;
   cursor: pointer;
+  color: rgb(97, 97, 97);
   transition: all 0.2s ease-in-out;
 }
 .calcSection p:hover{
   margin-left: 1.3rem;
+  color: black;
 }
 .calcSection hr{
   margin: -10px 1rem 0 1rem;

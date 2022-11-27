@@ -61,13 +61,13 @@ const Energ =()=>{
     
     const captureChnage =(e)=>{
         const {value, name, checked, selectedIndex, options} = e.target
-        setdata({...data, [name]:value})
+        setdata({...data, [name]:value, kcalResult:0})
         if(checked===true && name==='sex'){
-            setdata({...data, sex:value})
+            setdata({...data, sex:value, kcalResult:0})
         };
         if (name === "physical-act") {
             const optionText = options[selectedIndex].textContent //selects text from the active html select tag option
-            setdata({ ...data, PAinfo: optionText, PALevels: value, index:selectedIndex });        
+            setdata({ ...data, PAinfo: optionText, PALevels: value, index:selectedIndex, kcalResult:0 });        
         }
 
         setdata((prev)=>{//get access to current onchange data

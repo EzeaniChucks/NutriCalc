@@ -9,12 +9,24 @@
 .logoSection h1 {
   color: #0070f3;
   margin: 2rem 0 0 0;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: serif;
+  font-weight: 800;
+  letter-spacing: 0.7rem;
   font-size: 3rem;
 }
 
+.logoSection h1 span{
+  font-style: italic;
+  font-weight: bold;
+  font-size: 3.5rem;
+  letter-spacing: 0.1rem;
+}
 .logoSection p {
     margin: 0;
     margin-top: -10px;
-    font-size: 1.1rem;
+    margin-left: -15px;
+    font-size: 1rem;
+    letter-spacing: 0.03rem;
     font-style: oblique;
 }

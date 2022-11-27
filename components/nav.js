@@ -5,7 +5,7 @@ const Nav =()=>{
     const router = useRouter()
     return (
       <nav className={style.nav}>
-        <p onClick={() => router.push("/")}>EnCalc!</p>
+        <p onClick={() => router.push("/")}>enCalc</p>
         <ul>
           <li onClick={() => router.push("/")}>Home</li>
           <li onClick={() => router.push("/about")}>About</li>
