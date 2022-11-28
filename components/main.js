@@ -6,8 +6,10 @@ const Main =()=>{
 
     const handleNavigation =(e)=>{
         const {name} =e.target.dataset
-        if(name==='energyAdult') router.push('/energy-requirements')
+        if(name==='energyAdult') router.push('/energy-requirements');
+        if(name==='idealWeight') router.push('/ideal-body-weight');
     }
+    
     return (
         <main className={styles.main}>
             <div className={styles.calcSection}>
@@ -18,7 +20,7 @@ const Main =()=>{
                 <hr />
                 <p><IoIosArrowForward/> Estimate height</p>
                 <hr />
-                <p><IoIosArrowForward/> Ideal body weight</p>
+                <p onClick={handleNavigation} data-name ='idealWeight'><IoIosArrowForward/> Ideal body weight</p>
                 <hr />
                 <p><IoIosArrowForward/> Fat Mass/Fat free mass</p>
                 <hr />

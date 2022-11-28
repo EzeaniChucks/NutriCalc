@@ -1,0 +1,89 @@
+.main {
+  padding: 0.5rem 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.main div{
+  width: 50%;
+}
+
+.workArea{
+  display: flex;
+  gap: 6px;
+  justify-content: space-around;
+  border: 1px solid rgb(184, 184, 184);
+  padding: 15px 5px 15px 0;
+  margin: 15px 5px;
+  border-radius: 10px;
+  box-shadow: 1px 5px 10px gray;
+}
+.workArea>p{
+  margin: 0;
+  margin-left: 5px;
+  color: grey;
+}
+.workArea form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.workArea form div{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: space-around;
+}
+.workArea form label{
+   display: flex;
+}
+.workArea form label div{
+  border: 1px solid gray;
+  margin: 2px 3px;
+  display: flex;
+}
+
+.workArea form label .childage,
+.childheight{
+  border: none;
+}
+
+.workArea form label select{
+  border: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+.workArea form label{
+  margin: 5px 0;
+}
+.workArea .radios{
+  width: 12px;
+  margin: 0 5px;
+}
+.workArea .radios:nth-of-type(1){
+  margin-right: 30px;
+}
+.workArea button{
+  margin-top: 15px;
+  padding: 4px 10px;
+  letter-spacing: 0.6px;
+  background-color:black;
+  cursor: pointer;
+  color: white;
+  transition: all .2s ease-in;
+}
+.workArea button:active{
+  transform: scale(90%);
+}
+.workArea button:hover{
+  background-color: white;
+  color: black;
+}
+.workArea input{
+  width: 2.5rem;
+  margin-left: 10px;
+  outline: none;
+}

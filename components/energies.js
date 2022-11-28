@@ -1,12 +1,14 @@
 import styles from './energyreq.module.css';
 import {useEffect, useState} from 'react'
 import {useRouter} from 'next/router'
-import Kcalc from './calc/Kcalc';
+import KcalcForm from './forms/KcalcForm';
 import { IofM } from '../utils/prepareData/instituteOfMedicine';
 import { Hb } from '../utils/prepareData/harrisBenedict';
 import {Scho} from '../utils/prepareData/schofield';
+import {ho} from '../utils/prepareData/henryOxford';
 import { IoMCalc } from '../utils/calculator/IoMCalc';
 import { hbCalc } from '../utils/calculator/hbCalc';
+import { hoCalc } from '../utils/calculator/hoCalc';
 import {schoCalc} from '../utils/calculator/schocalc'
 
 const Energ =()=>{
@@ -43,12 +45,12 @@ const Energ =()=>{
         const {weight, height, age, sex, methodName} = data
         if(!sex) return setdata({...data, errorInfo: `Specify client's sex`})
         if(age<=0||height<=0||weight<=0) return setdata({...data, errorInfo:`Values can't be zero or less`})
-        
+        if(height>3) return setdata({...data, errorInfo:`Your height isn't inputed in meters. Enter height in meters to continue`})
         if(methodName ==='Institute of medicine'){
            IoMCalc({data, setdata})
         }
         if(methodName ==='Henry Oxford'){
-        //    IoMCalc({data, setdata})
+           hoCalc({data, setdata})
         }
         if(methodName ==='Schofield'){
            schoCalc({data, setdata})
@@ -77,6 +79,9 @@ const Energ =()=>{
             if(data.methodName === 'Schofield'){
                 Scho({prev, setPVals, Pvals}) //prepare relevant data for execution
             }
+            if(data.methodName === 'Schofield'){
+                ho({prev, setPVals, Pvals}) //prepare relevant data for execution
+            }
             if(data.methodName === "Harris-Benedict") {
                 Hb({prev, setPVals, Pvals});
             }
@@ -101,8 +106,12 @@ const Energ =()=>{
         })
         
     }
-    const handleHO=()=>{
-        
+    const handleHO=(e)=>{
+        setdata({...data, methodName:e.target.textContent, warningInfo:'', errorInfo:''})
+        setdata((prev)=>{
+            ho({prev, setPVals, Pvals})
+            return prev;
+        })
     }
     const handleMST=()=>{
 
@@ -158,15 +167,15 @@ const Energ =()=>{
     return (
       <main className={styles.main}>
         <div>
-            <Kcalc data={data} setdata={setdata} calcKilocal={calcKilocal} captureChnage={captureChnage} Pvals={Pvals}/>
+            <KcalcForm data={data} setdata={setdata} calcKilocal={calcKilocal} captureChnage={captureChnage} Pvals={Pvals}/>
             <div className={styles.otherArea}>
-                <h4>You're using the <span> {data?.methodName}</span> method</h4>
+                <h4>You're using the <span> {data?.methodName}</span> formula</h4>
                 {data?.kcalResult !==0 && (
                     <>
                     <p className={styles.result}>
                         your BMR is <span>{Math.ceil(data?.bmrResult)} kcal</span></p>
                         <p className={styles.result}>Kilocalorie requirement is <span>{Math.ceil(data?.kcalResult)} kcal</span></p>
-                        <p className={styles.result}>Physical activity level of {data?.PAinfo}</p>
+                        <p className={styles.result}>Physical activity level is {data?.PAinfo}</p>
                     </>)
                 }
                 
@@ -177,7 +186,7 @@ const Energ =()=>{
                     <p className={styles.warningInf}>NOTE: {data?.warningInfo}</p>
                 }
                 <div className={styles.methodContainer}>
-                    <p>Compare results with other methods</p>
+                    <p>Compare results with other formualae</p>
                     <div id='methodBtns' className={styles.methodList}>
                         <p id='methodBtnIM' className={styles.kid} onClick={handleIM}>Institute of medicine</p>
                         <p className={styles.kid} onClick={handleHO}>Henry Oxford</p>
@@ -185,9 +194,9 @@ const Energ =()=>{
                         <p className={styles.kid} onClick={handleSCHO}>Schofield</p>
                         <p className={styles.kid} onClick={handleCUNN}>Cunningham</p>
                         <p className={styles.kid} onClick={handleHB}>Harris-Benedict</p>
-                        <h6>Which of these methods is best?</h6>
+                        <h6>Which of these formualae is best?</h6>
                         <h6>Which one perfectly fits into your needs?</h6>
-                        <h6 onClick={()=>router.push('/faq')}>Visit our FAQ for answers</h6>
+                        <h6 onClick={()=>router.push('/faq')}>Visit our Frequently Asked Questions section</h6>
                     </div>
                 </div>
             </div>
