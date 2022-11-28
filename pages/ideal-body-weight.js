@@ -1,4 +1,4 @@
-import IdealBodyWeight from "../components/IdealBodyWeight"
+import IdealBodyWeight from "../components/idealBodyWeight"
 
 const IdealPage =()=>{
     return <IdealBodyWeight/>
