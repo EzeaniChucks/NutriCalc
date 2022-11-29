@@ -1,6 +1,7 @@
 import styles from "../idw.module.css";
 
-const IDWFormKids = ({}) => {
+const IDWFormKids = ({data, captureChange, genResult}) => {
+  const {childage, childheight}= data
   return (
     <div className={styles.workArea}>
       <p>Enter values</p>
@@ -11,18 +12,18 @@ const IDWFormKids = ({}) => {
             M
             <input
               className={styles.radios}
-              // onChange={captureChnage}
+              onChange={captureChange}
               type="radio"
               value={"male"}
-              name="sex"
+              name="childgender"
             />
             F{" "}
             <input
               className={styles.radios}
-              // onChange={captureChnage}
+              onChange={captureChange}
               type="radio"
               value={"female"}
-              name="sex"
+              name="childgender"
             />
           </label>
         </div>
@@ -31,14 +32,14 @@ const IDWFormKids = ({}) => {
             <div>
                 <input
                     type="number"
-                    // value={age}
+                    value={childage}
                     className={styles.childage}
-                    name="age"
-                    // onChange={captureChnage}
+                    name="childage"
+                    onChange={captureChange}
                 />
-                <select>
-                    <option>months</option>
-                    <option>years</option>
+                <select name="childageindicator" onChange={captureChange}>
+                    <option value='month'>month(s)</option>
+                    <option value='year'>year(s)</option>
                 </select> 
             </div>
         </label>
@@ -47,30 +48,18 @@ const IDWFormKids = ({}) => {
             <div>
                <input
                 type="number"
-                // value={height}
+                value={childheight}
                 className={styles.childheight}
-                name="height"
-                // onChange={captureChnage}
+                name="childheight"
+                onChange={captureChange}
                 />
-                <select>
-                    <option>cm</option>
-                    <option>mtrs</option>
+                <select name="childheightindicator" onChange={captureChange}>
+                    <option value='centimeters'>cm</option>
+                    <option value='meters'>meters</option>
                 </select> 
             </div>
         </label> 
-            
-        
-        {/* <label>
-          P. activity level:
-          <select onChange={captureChnage} id="selectTagPa" name="physical-act">
-            <option value={Pvals.sedentary}>Sedentary</option>
-            <option value={Pvals.lightlyActive}>Lightly Active</option>
-            <option value={Pvals.moderatelyActive}>Moderately active</option>
-            <option value={Pvals.extraActive}>Extra Active</option>
-            {methodName === 'Schofield' && <option value={Pvals.extremelyActive}>Extremely Active</option>}
-          </select>
-        </label> */}
-        <button type="button">Generate Result</button>
+        <button onClick={genResult} type="button">Generate Result</button>
       </form>
     </div>
   );

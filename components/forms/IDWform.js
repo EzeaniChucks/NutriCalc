@@ -1,7 +1,8 @@
 import styles from '../idw.module.css';
 
-const IDWFORM = ({}) => {
-  
+const IDWFORM = ({captureChange, data, genResult}) => {
+  const {age, height} =  data
+
   return (
     <div className={styles.workArea}>
       <p>Enter values</p>
@@ -12,7 +13,7 @@ const IDWFORM = ({}) => {
             M
             <input
               className={styles.radios}
-              // onChange={captureChnage}
+              onChange={captureChange}
               type="radio"
               value={"male"}
               name="sex"
@@ -20,7 +21,7 @@ const IDWFORM = ({}) => {
             F{" "}
             <input
               className={styles.radios}
-              // onChange={captureChnage}
+              onChange={captureChange}
               type="radio"
               value={"female"}
               name="sex"
@@ -31,31 +32,21 @@ const IDWFORM = ({}) => {
           age in years:
           <input
             type="number"
-            // value={age}
+            value={age}
             name="age"
-            // onChange={captureChnage}
+            onChange={captureChange}
           />
         </label>
         <label>
           height in m:
           <input
             type="number"
-            // value={height}
+            value={height}
             name="height"
-            // onChange={captureChnage}
+            onChange={captureChange}
           />
         </label>
-        {/* <label>
-          P. activity level:
-          <select onChange={captureChnage} id="selectTagPa" name="physical-act">
-            <option value={Pvals.sedentary}>Sedentary</option>
-            <option value={Pvals.lightlyActive}>Lightly Active</option>
-            <option value={Pvals.moderatelyActive}>Moderately active</option>
-            <option value={Pvals.extraActive}>Extra Active</option>
-            {methodName === 'Schofield' && <option value={Pvals.extremelyActive}>Extremely Active</option>}
-          </select>
-        </label> */}
-        <button type="button">
+        <button onClick={genResult} type="button">
           Generate Result
         </button>
       </form>
