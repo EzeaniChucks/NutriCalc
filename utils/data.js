@@ -1,7 +1,68 @@
 export const faq = [
   {
+    id: 0.5,
+    title: "The Institute of Medicine formula",
+    content: [
+      "The Institute of Medicine equation, published in 2002, is the engine behind the 2005 Dietary Guidelines for Americans and the new food pyramid MyPyramid.",
+      `It uses a different approach to most others. The institute of medicine formula doesn’t measure basal metabolic rate,
+      but uses experiments based on doubly-labeled water (a more precise method than predictive equations for determining energy requirement).
+      The scientists at the institute of Medicine said in their report that the factorial method used by other formulae (BMR x Physical activity level) tends to underestimate energy expenditure.`,
+    ],
+  },
+  {
+    id: 0.6,
+    title: "Henry Oxford formula",
+    content: [
+      "The Institute of Medicine formula published in 2002. It is the equation behind the 2005 Dietary Guidelines for Americans and the new food pyramid MyPyramid.",
+      `The Institute of Medicine equation uses a different approach to most others. The equation doesn’t measure basal metabolic rate,
+      but uses experiments based on doubly-labeled water (a more precise method than predictive equations for determining energy requirement).
+      The scientists at the institute of Medicine said in their report that the factorial method used by other formulae (BMR x Physical activity level) tends to underestimate energy expenditure.`,
+    ],
+  },
+  {
+    id: 0.7,
+    title: "Mifflin St. Jeor formula",
+    content: [
+      "The Institute of Medicine formula published in 2002. It is the equation behind the 2005 Dietary Guidelines for Americans and the new food pyramid MyPyramid.",
+      `The Institute of Medicine equation uses a different approach to most others. The equation doesn’t measure basal metabolic rate,
+      but uses experiments based on doubly-labeled water (a more precise method than predictive equations for determining energy requirement).
+      The scientists at the institute of Medicine said in their report that the factorial method used by other formulae (BMR x Physical activity level) tends to underestimate energy expenditure.`,
+    ],
+  },
+  {
+    id: 0.8,
+    title: "Schofield formula",
+    content: [
+      "The Schofield equation, published in 1985, is primarily used to predict Basal Metabolic Rate(BMR).",
+      "Kilocalorie requirement can then be calculated using the factorial method: BMR x Physical activity level",
+      `The Institute of Medicine equation uses a different approach to most others. The equation doesn’t measure basal metabolic rate,
+      but uses experiments based on doubly-labeled water (a more precise method than predictive equations for determining energy requirement).
+      The scientists at the institute of Medicine said in their report that the factorial method used by other formulae (BMR x Physical activity level) tends to underestimate energy expenditure.`,
+    ],
+  },
+  {
+    id: 0.9,
+    title: "Cunningham formula",
+    content: [
+      "The Institute of Medicine formula published in 2002. It is the equation behind the 2005 Dietary Guidelines for Americans and the new food pyramid MyPyramid.",
+      `The Institute of Medicine equation uses a different approach to most others. The equation doesn’t measure basal metabolic rate,
+      but uses experiments based on doubly-labeled water (a more precise method than predictive equations for determining energy requirement).
+      The scientists at the institute of Medicine said in their report that the factorial method used by other formulae (BMR x Physical activity level) tends to underestimate energy expenditure.`,
+    ],
+  },
+  {
+    id: 0.95,
+    title: "Harris Benedict formula",
+    content: [
+      "The Institute of Medicine formula published in 2002. It is the equation behind the 2005 Dietary Guidelines for Americans and the new food pyramid MyPyramid.",
+      `The Institute of Medicine equation uses a different approach to most others. The equation doesn’t measure basal metabolic rate,
+      but uses experiments based on doubly-labeled water (a more precise method than predictive equations for determining energy requirement).
+      The scientists at the institute of Medicine said in their report that the factorial method used by other formulae (BMR x Physical activity level) tends to underestimate energy expenditure.`,
+    ],
+  },
+  {
     id: 1,
-    title: "Which formula is most appropriate for my weight range?",
+    title: "Which equation best fits my weight range?",
     content: [
       "The most accurate appears to be relative by defintion",
       `But literature often say it is Harris-Benedict,

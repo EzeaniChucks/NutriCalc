@@ -1,6 +1,6 @@
 import styles from "../idw.module.css";
 
-const IDWFormKids = ({data, captureChange, genResult}) => {
+const IDWFormKids = ({data, captureChange, genResultKid}) => {
   const {childage, childheight}= data
   return (
     <div className={styles.workArea}>
@@ -28,38 +28,48 @@ const IDWFormKids = ({data, captureChange, genResult}) => {
           </label>
         </div>
         <label>
-            age:
-            <div>
-                <input
-                    type="number"
-                    value={childage}
-                    className={styles.childage}
-                    name="childage"
-                    onChange={captureChange}
-                />
-                <select name="childageindicator" onChange={captureChange}>
-                    <option value='month'>month(s)</option>
-                    <option value='year'>year(s)</option>
-                </select> 
-            </div>
+          age:
+          <div>
+            <input
+              type="number"
+              value={childage}
+              className={styles.childage}
+              name="childage"
+              onChange={captureChange}
+            />
+            <select
+              id="childageid"
+              name="childageindicator"
+              onChange={captureChange}
+            >
+              <option value="month">month(s)</option>
+              <option value="year">year(s)</option>
+            </select>
+          </div>
         </label>
         <label>
-        height:
-            <div>
-               <input
-                type="number"
-                value={childheight}
-                className={styles.childheight}
-                name="childheight"
-                onChange={captureChange}
-                />
-                <select name="childheightindicator" onChange={captureChange}>
-                    <option value='centimeters'>cm</option>
-                    <option value='meters'>meters</option>
-                </select> 
-            </div>
-        </label> 
-        <button onClick={genResult} type="button">Generate Result</button>
+          height:
+          <div>
+            <input
+              type="number"
+              value={childheight}
+              className={styles.childheight}
+              name="childheight"
+              onChange={captureChange}
+            />
+            <select
+              name="childheightindicator"
+              id="childheightid"
+              onChange={captureChange}
+            >
+              <option value="centimeters">cm</option>
+              <option value="meters">meters</option>
+            </select>
+          </div>
+        </label>
+        <button onClick={genResultKid} type="button">
+          Generate Result
+        </button>
       </form>
     </div>
   );

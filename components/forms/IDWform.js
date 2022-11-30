@@ -28,8 +28,9 @@ const IDWFORM = ({captureChange, data, genResult}) => {
             />
           </label>
         </div>
-        <label>
-          age in years:
+        <div className={styles.kidsdiv}>
+          <label>
+            age in years:
           <input
             type="number"
             value={age}
@@ -37,6 +38,8 @@ const IDWFORM = ({captureChange, data, genResult}) => {
             onChange={captureChange}
           />
         </label>
+        </div>
+        
         <label>
           height in m:
           <input

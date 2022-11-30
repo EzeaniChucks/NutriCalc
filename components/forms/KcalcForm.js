@@ -62,7 +62,7 @@ const Kcalc = ({ data, calcKilocal, captureChnage, Pvals }) => {
             <option value={Pvals.lightlyActive}>Lightly Active</option>
             <option value={Pvals.moderatelyActive}>Moderately active</option>
             <option value={Pvals.extraActive}>Extra Active</option>
-            {methodName === 'Schofield' && <option value={Pvals.extremelyActive}>Extremely Active</option>}
+            {methodName === 'Schofield' || methodName ==='Henry Oxford'&&<option value={Pvals.extremelyActive}>Extremely Active</option>}
           </select>
         </label>
         <button onClick={calcKilocal} id="gen-result-btn" type="button">

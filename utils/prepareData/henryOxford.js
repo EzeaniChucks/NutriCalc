@@ -1,6 +1,10 @@
 export const ho =({prev, setPVals, Pvals})=>{
-    setPVals({...Pvals,sedentary: 1, lightlyActive: 1.12, moderatelyActive: 1.24, extraActive: 1.45,});
-
+    if(prev.sex==='male'){
+        setPVals({...Pvals,sedentary: 1.4, lightlyActive: 1.55, moderatelyActive: 1.7, extraActive: 1.8, extremelyActive:1.9});
+    }
+    if(prev.sex==='female'){
+        setPVals({...Pvals,sedentary: 1.4, lightlyActive: 1.5, moderatelyActive: 1.55, extraActive: 1.6, extremelyActive:1.7});
+    }
     //acces the just upadted PVALs. Use it to programmatically determine
     //value of final physical activity level as well as value of select tag
     setPVals((prevVals)=>{

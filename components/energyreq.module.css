@@ -75,6 +75,7 @@
 }
 
 .result{
+  font-size: 0.8rem;
   text-align: left;
   margin: 0px 0 10px 5px;
   color: green;
@@ -99,8 +100,11 @@
   padding: 0 5px;
 }
 .warningInf{
-  text-align: center;
-  color: rgb(231, 160, 8);
+  text-align: left;
+  margin: 0 0 0 7px;
+  line-height: 20px;
+  font-size: 0.8rem;
+  color: rgb(199, 5, 5);
 }
 
 .warningInf span{

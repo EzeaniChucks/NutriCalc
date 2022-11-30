@@ -2,12 +2,16 @@ import styles from './energyreq.module.css';
 import {useEffect, useState} from 'react'
 import {useRouter} from 'next/router'
 import KcalcForm from './forms/KcalcForm';
+
 import { IofM } from '../utils/prepareData/instituteOfMedicine';
 import { Hb } from '../utils/prepareData/harrisBenedict';
+import {msj} from '../utils/prepareData/mifflin-st-jeor';
 import {Scho} from '../utils/prepareData/schofield';
 import {ho} from '../utils/prepareData/henryOxford';
+
 import { IoMCalc } from '../utils/calculator/IoMCalc';
 import { hbCalc } from '../utils/calculator/hbCalc';
+import {msjCalc} from '../utils/calculator/msjCalc';
 import { hoCalc } from '../utils/calculator/hoCalc';
 import {schoCalc} from '../utils/calculator/schocalc'
 
@@ -36,16 +40,21 @@ const Energ =()=>{
         extraActive:1.725,
         extremelyActive:0,
     })
-  
     
     const calcKilocal =()=>{
         console.log(data.PALevels)
-        console.log(data.index)
+        console.log(data)
         console.log(Pvals)
         const {weight, height, age, sex, methodName} = data
+        
+        //validators
         if(!sex) return setdata({...data, errorInfo: `Specify client's sex`})
         if(age<=0||height<=0||weight<=0) return setdata({...data, errorInfo:`Values can't be zero or less`})
-        if(height>3) return setdata({...data, errorInfo:`Your height isn't inputed in meters. Enter height in meters to continue`})
+        if(height>2.5) return setdata({...data, errorInfo:`Most likely, your height is entered in centimeters or other units. Enter height in meters to continue`})
+        if(age<18) return setdata({...data, errorInfo:`This section isn't ideal for calculating requirements of people less than 18. Visit our Home page for the more appropriate (paediatrics) calculator`})
+        if(age>=18) setdata({...data, errorInfo:``})
+        
+        //calculators for equation methods chosen
         if(methodName ==='Institute of medicine'){
            IoMCalc({data, setdata})
         }
@@ -55,7 +64,9 @@ const Energ =()=>{
         if(methodName ==='Schofield'){
            schoCalc({data, setdata})
         }
-
+        if(methodName ==='Mifflin St. Jeor'){
+           msjCalc({data, setdata})
+        }
         if(methodName === 'Harris-Benedict'){
             hbCalc({data, setdata})
         } 
@@ -64,6 +75,7 @@ const Energ =()=>{
     const captureChnage =(e)=>{
         const {value, name, checked, selectedIndex, options} = e.target
         setdata({...data, [name]:value, kcalResult:0})
+
         if(checked===true && name==='sex'){
             setdata({...data, sex:value, kcalResult:0})
         };
@@ -71,6 +83,7 @@ const Energ =()=>{
             const optionText = options[selectedIndex].textContent //selects text from the active html select tag option
             setdata({ ...data, PAinfo: optionText, PALevels: value, index:selectedIndex, kcalResult:0 });        
         }
+        
 
         setdata((prev)=>{//get access to current onchange data
             if(data.methodName === 'Institute of medicine'){
@@ -79,8 +92,11 @@ const Energ =()=>{
             if(data.methodName === 'Schofield'){
                 Scho({prev, setPVals, Pvals}) //prepare relevant data for execution
             }
-            if(data.methodName === 'Schofield'){
+            if(data.methodName === 'Henry Oxford'){
                 ho({prev, setPVals, Pvals}) //prepare relevant data for execution
+            }
+            if(data.methodName === 'Mifflin St. Jeor'){
+                msj({prev, setPVals, Pvals}) //prepare relevant data for execution
             }
             if(data.methodName === "Harris-Benedict") {
                 Hb({prev, setPVals, Pvals});
@@ -113,14 +129,18 @@ const Energ =()=>{
             return prev;
         })
     }
-    const handleMST=()=>{
-
+    const handleMST=(e)=>{
+        setdata({...data, methodName:e.target.textContent, warningInfo:'', errorInfo:''})
+        setdata((prev)=>{
+            msj({prev, setPVals, Pvals})
+            return prev;
+        })
     }
     const handleSCHO=(e)=>{
         setdata({...data, methodName:e.target.textContent, warningInfo:'', errorInfo:''})
         setdata((prev) => {
-          Scho({ prev, setPVals, Pvals });
-          return prev;
+            Scho({ prev, setPVals, Pvals });
+            return prev;
         });
     }
     const handleCUNN=()=>{
@@ -151,7 +171,6 @@ const Energ =()=>{
                 const sele =document.querySelector("#selectTagPa").options[prev.index].value;
                 document.querySelector("#selectTagPa").value = sele;
                 prev.PALevels= sele;
-                // console.log(sele);
                 return prev
             })
         }
@@ -159,10 +178,10 @@ const Energ =()=>{
     
 
     useEffect(()=>{
-        if (data?.bmrResult!==0){
+        if (data?.kcalResult!==0){
              document.getElementById('gen-result-btn').click()
         }
-    },[data?.methodName, data?.bmrResult])
+    },[data?.methodName, data?.kcalResult])
     
     return (
       <main className={styles.main}>
@@ -173,7 +192,7 @@ const Energ =()=>{
                 {data?.kcalResult !==0 && (
                     <>
                     <p className={styles.result}>
-                        your BMR is <span>{Math.ceil(data?.bmrResult)} kcal</span></p>
+                        your BMR is {data?.bmrResult ===0? 'not available using this formula': <span>{`${Math.ceil(data?.bmrResult)} kcal`}</span>}</p>
                         <p className={styles.result}>Kilocalorie requirement is <span>{Math.ceil(data?.kcalResult)} kcal</span></p>
                         <p className={styles.result}>Physical activity level is {data?.PAinfo}</p>
                     </>)

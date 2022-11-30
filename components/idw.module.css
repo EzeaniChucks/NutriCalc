@@ -5,25 +5,38 @@
   align-items: center;
   margin-bottom: 20px;
 }
-
-.main>div>h4{
+.container{
+  width: 50%;
+}
+.container>p{
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: rgb(1,37,61);
+}
+.container>div>h3{
+  font-size: 0.8rem;
+  margin-left: 15px;
+}
+.container>div>h4{
   color: green;
   font-weight: normal;
+  text-align: center;
   margin: 10px 10px;
   font-size: 0.9rem;
 }
 .main .error{
   color: tomato;
 }
-.main>div>h4>span{
+.container>div>h4>span{
   color: rgb(4, 112, 4);
   padding: 2px 3px;
   background-color: rgb(215, 248, 220);
 }
 .main hr{
-  border: 1px solid rgb(211, 211, 211);
-  width: 70%;
-  border: 10px 30%;
+  border: 1px solid rgb(49, 105, 226);
+  margin: 30px 30% 20px 30%;
 }
 
 .workArea{
@@ -37,8 +50,9 @@
   box-shadow: 1px 5px 10px gray;
 }
 .workArea>p{
-  margin: 0;
-  margin-left: 5px;
+  margin: 30px 0 0 5px;
+  /* margin-left: 5px; */
+  font-size: 0.8rem;
   color: grey;
 }
 .workArea form{
@@ -52,6 +66,7 @@
   align-items: center;
   justify-content: space-around;
 }
+
 .workArea form label{
    display: flex;
 }
@@ -75,6 +90,7 @@
 .workArea form label{
   margin: 5px 0;
 }
+
 .workArea .radios{
   width: 12px;
   margin: 0 5px;
@@ -99,7 +115,14 @@
   color: black;
 }
 .workArea input{
-  width: 3rem;
-  margin-left: 10px;
+  width: 3.2rem;
+  padding-left: 3px;
+  margin-left: 2px;
   outline: none;
+}
+
+@media screen and (max-width:700px){
+  .container{
+    width: 100%;
+  }
 }
