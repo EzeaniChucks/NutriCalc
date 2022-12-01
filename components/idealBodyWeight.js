@@ -47,14 +47,18 @@ const IdealBodyWeight =()=>{
         }
 
         if(childage<=11 && childageindicator==='month') {
-            idwKid = (Number(childage)+7)/2;
+            idwKid = (Number(childage)+8)/2;
             return dispatch({ type: "GEN_RESULT_CHILD", payload: idwKid });
         }
         if(childage>=1 && childage<=5 && childageindicator==='year') {
             idwKid = 2*(Number(childage)+5)
             return dispatch({ type: "GEN_RESULT_CHILD", payload: idwKid });
         }
-        if(childage>=5 && childage<=14 && childageindicator==='year') {
+        if(childage>5 && childage<=14 && childageindicator==='year') {
+            idwKid = 4*(Number(childage))
+            return dispatch({ type: "GEN_RESULT_CHILD", payload: idwKid });
+        }
+        if(childage>14 && childage<=17 && childageindicator==='year') {
             idwKid = 4*(Number(childage))
             return dispatch({ type: "GEN_RESULT_CHILD", payload: idwKid });
         }
@@ -64,6 +68,8 @@ const IdealBodyWeight =()=>{
         let idwAdult= 0;
         if(age<18) return dispatch({type:'ERRORADULT', payload:`This calculator is meant for people older than 18. Enter a higher age value. Or use the calculator below (for children) instead`})
         if(age==0||height==0) return dispatch({type:'ERRORADULT', payload:`Age or Height can't be zero`})
+        if(height>2.5) return dispatch({type:'ERRORADULT', payload:`You probably typed your height in centimeters or inches. Enter the value in meters to continue`})
+        if(!sex) return dispatch({type:'ERRORADULT', payload:`Gender can't be empty`})
         if(sex ==='male'){
             idwAdult = 50 + (0.91 *(height*100-152.4))
         }
@@ -75,7 +81,7 @@ const IdealBodyWeight =()=>{
     return(
         <section className={styles.main}>
             <div className={styles.container}>
-               <p>Ideal Body Weight</p>
+               <p>Get your ideal body weight</p>
                 <div>
                     <h3>For Adults (18years or older)</h3>
                     <IDWFORM data={state} captureChange={captureChange} genResult={genResult}/>

@@ -1,6 +1,7 @@
 import styles from './main.module.css'
 import {useRouter} from 'next/router'
-import {IoIosArrowForward} from 'react-icons/io'
+import {IoIosArrowForward, IoMdArrowDropright} from 'react-icons/io'
+import { HiArrowRight } from "react-icons/hi";
 const Main =()=>{
     const router = useRouter()
 
@@ -14,18 +15,17 @@ const Main =()=>{
         <main className={styles.main}>
             <div className={styles.calcSection}>
                 <h3>What would you like to do?</h3>
-                <p onClick={handleNavigation} data-name ='energyAdult'><IoIosArrowForward/> Energy requirements (for adults)</p>
+                <p onClick={handleNavigation} data-name ='energyAdult'><HiArrowRight/> Energy requirements (for adults)</p>
                 <hr />
-                <p onClick={handleNavigation} data-name ='energy'><IoIosArrowForward/> Energy requirements (paediatrics)</p>
+                <p onClick={handleNavigation} data-name ='energy'><HiArrowRight/> Energy requirements (paediatrics)</p>
                 <hr />
-                <p><IoIosArrowForward/> Estimate height</p>
+                <p><HiArrowRight/> Estimate height</p>
                 <hr />
-                <p onClick={handleNavigation} data-name ='idealWeight'><IoIosArrowForward/> Ideal body weight</p>
+                <p onClick={handleNavigation} data-name ='idealWeight'><HiArrowRight/> Ideal body weight</p>
                 <hr />
-                <p><IoIosArrowForward/> Fat Mass/Fat free mass</p>
+                <p><HiArrowRight/> Fat Mass/Fat free mass</p>
                 <hr />
-                <p><IoIosArrowForward/> Analyze 24-hr dietary recall</p>
-                <hr />
+                <p><HiArrowRight/> Analyze 24-hr dietary recall</p>
             </div>
         </main>
     );

@@ -9,8 +9,8 @@
 .logoSection h1 {
   color: #0070f3;
   margin: 2rem 0 0 0;
-  /* font-family: Arial, Helvetica, sans-serif; */
-  font-family: serif;
+  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Inter', sans-serif; */
   font-weight: 800;
   letter-spacing: 0.7rem;
   font-size: 3rem;
@@ -19,6 +19,8 @@
 .logoSection h1 span{
   font-style: italic;
   font-weight: bold;
+  font-family: 'Abril Fatface', cursive;
+  font-family: serif;
   font-size: 3.5rem;
   letter-spacing: 0.1rem;
 }

@@ -1,7 +1,7 @@
 import styles from "../idw.module.css";
 
 const IDWFormKids = ({data, captureChange, genResultKid}) => {
-  const {childage, childheight}= data
+  const {childage}= data
   return (
     <div className={styles.workArea}>
       <p>Enter values</p>
@@ -47,7 +47,7 @@ const IDWFormKids = ({data, captureChange, genResultKid}) => {
             </select>
           </div>
         </label>
-        <label>
+        {/* <label>
           height:
           <div>
             <input
@@ -66,7 +66,7 @@ const IDWFormKids = ({data, captureChange, genResultKid}) => {
               <option value="meters">meters</option>
             </select>
           </div>
-        </label>
+        </label> */}
         <button onClick={genResultKid} type="button">
           Generate Result
         </button>

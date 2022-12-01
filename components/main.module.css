@@ -6,31 +6,52 @@
   flex-direction: column;
   align-items: center;
 }
-
+.main:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-image: url('../assests/Calculator_Monochromatic.png');
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+  background-size: cover;
+}
 .calcSection{
   display: flex;
   flex-direction: column;
 }
 
 .calcSection h3{
+  font-family: 'Tangerine', cursive;
+  font-size: 2rem;
+  margin: 20px 0 10px 0;
   text-align: center;
   font-weight: normal;
+  letter-spacing: 2px;
   color: rgb(1, 37, 61);
 }
 
 .calcSection p {
-  margin: 1rem;
+  margin: 15px 1rem;
   cursor: pointer;
-  color: rgb(97, 97, 97);
+  font-size: 0.9rem;
+  z-index: 100;
   transition: all 0.2s ease-in-out;
+}
+.calcSection p svg{
+  color: blueviolet;
+  margin-right: 10px;
 }
 .calcSection p:hover{
   margin-left: 1.3rem;
   color: black;
 }
 .calcSection hr{
-  margin: -10px 1rem 0 1rem;
-  /* margin-top: -10px; */
+  margin: 0px 2rem 0 3rem;
   border: 1px solid rgb(238, 236, 236);
-  width: 100%;
+  /* width: 100%; */
 }

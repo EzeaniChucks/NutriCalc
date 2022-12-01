@@ -13,6 +13,7 @@
   margin-bottom: 30px;
   font-weight: bold;
   font-size: 1.1rem;
+  text-transform: capitalize;
   color: rgb(1,37,61);
 }
 .container>div>h3{
