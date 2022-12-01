@@ -9,6 +9,10 @@ const Main =()=>{
         const {name} =e.target.dataset
         if(name==='energyAdult') router.push('/energy-requirements');
         if(name==='idealWeight') router.push('/ideal-body-weight');
+        if(name==='estimate height') router.push('/estimate-height');
+        if(name==='energy') router.push('/energy-req-paed');
+        if(name==='FM/FFM') router.push('/fat-mass-ffmass');
+        if(name==='24hrRecall') router.push('/24-hr-recall');
     }
     
     return (
@@ -19,13 +23,13 @@ const Main =()=>{
                 <hr />
                 <p onClick={handleNavigation} data-name ='energy'><HiArrowRight/> Energy requirements (paediatrics)</p>
                 <hr />
-                <p><HiArrowRight/> Estimate height</p>
+                <p onClick={handleNavigation} data-name ='estimate height'><HiArrowRight/> Estimate height</p>
                 <hr />
                 <p onClick={handleNavigation} data-name ='idealWeight'><HiArrowRight/> Ideal body weight</p>
                 <hr />
-                <p><HiArrowRight/> Fat Mass/Fat free mass</p>
+                <p onClick={handleNavigation} data-name ='FM/FFM'><HiArrowRight/> Fat Mass/Fat free mass</p>
                 <hr />
-                <p><HiArrowRight/> Analyze 24-hr dietary recall</p>
+                <p onClick={handleNavigation} data-name ='24hrRecall'><HiArrowRight/> Analyze 24-hr dietary recall</p>
             </div>
         </main>
     );
