@@ -11,16 +11,15 @@
   margin: 2rem 0 0 0;
   font-family: cursive;
   font-weight: 800;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.75rem;
   font-size: 3rem;
 }
 
 .logoSection h1 span{
   font-style: italic;
   font-weight: bold;
-  font-family: cursive;
   font-family: serif;
-  font-size: 3.5rem;
+  font-size: 3rem;
   letter-spacing: 0.1rem;
 }
 .logoSection p {
@@ -29,6 +28,6 @@
     margin-left: -20px;
     font-size: 0.85rem;
     color: grey;
-    letter-spacing: 0.03rem;
+    letter-spacing: 0.02rem;
     font-style:italic;
 }

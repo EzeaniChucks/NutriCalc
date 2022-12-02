@@ -13,6 +13,7 @@
     margin: 0;
     color: rgb(0,112,243);
     font-weight: bold;
+    align-self: center;
     cursor: pointer;
 }
 .nav>ul{
