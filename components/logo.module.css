@@ -9,26 +9,26 @@
 .logoSection h1 {
   color: #0070f3;
   margin: 2rem 0 0 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: cursive;
   font-weight: 800;
-  letter-spacing: 0.7rem;
+  letter-spacing: 0.4rem;
   font-size: 3rem;
 }
 
 .logoSection h1 span{
   font-style: italic;
   font-weight: bold;
-  font-family: 'Abril Fatface', cursive;
+  font-family: cursive;
   font-family: serif;
   font-size: 3.5rem;
   letter-spacing: 0.1rem;
 }
 .logoSection p {
     margin: 0;
-    margin-top: -15px;
+    margin-top: -10px;
     margin-left: -20px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: grey;
-    letter-spacing: 0.09rem;
+    letter-spacing: 0.03rem;
     font-style:italic;
 }

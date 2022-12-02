@@ -6,16 +6,15 @@
     margin-bottom: 10px;
 }
 .main h1{
-    font-size: 1.2rem;
-    margin: 10px 0 0 0;
+    font-size: 1.5rem;
     color: rgb(95, 95, 95);
     text-align: center;
 }
 .main h2{
     text-align: center;
     margin: 0;
-    color: rgb(95, 95, 95);
     font-size: 1rem;
+    color: rgb(95, 95, 95);
 }
 .main img{
     height: 300px;
