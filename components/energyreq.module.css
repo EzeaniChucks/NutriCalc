@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
+  position: relative;
 }
 .main:before {
   content: ' ';
@@ -22,6 +23,17 @@
 }
 .main>div{
   width: 50%;
+}
+.main>div>p{
+  background-color: rgb(140, 96, 182);
+  color: white;
+  position: absolute;
+  border-radius: 3px;
+  top: 14px;
+  left: 40px;
+  padding: 0 10px 3px 10px;
+  margin: 0;
+  width: fit-content;
 }
 .main h4{
   margin: 10px 0 10px 5px;

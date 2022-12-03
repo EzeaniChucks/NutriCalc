@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 10px;
 }
 .main:before {
   content: ' ';
@@ -27,10 +28,10 @@
 
 .calcSection h3{
   font-family: 'Tangerine', cursive;
-  font-size: 2rem;
-  margin: 20px 0 10px 0;
+  font-size: 1.5rem;
+  margin: 5px 0 10px 0;
   text-align: center;
-  font-weight: normal;
+  font-weight: bold;
   letter-spacing: 2px;
   color: rgb(1, 37, 61);
 }
@@ -38,6 +39,7 @@
 .calcSection p {
   margin: 15px 1rem;
   cursor: pointer;
+  color: rgb(126, 126, 126);
   font-size: 0.9rem;
   z-index: 100;
   transition: all 0.2s ease-in-out;
@@ -49,6 +51,7 @@
 .calcSection p:hover{
   margin-left: 1.3rem;
   color: black;
+  transform: scale(105%);
 }
 .calcSection hr{
   margin: 0px 2rem 0 3rem;

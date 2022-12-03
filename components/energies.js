@@ -186,6 +186,7 @@ const Energ =()=>{
     return (
       <main className={styles.main}>
         <div>
+            <p>energy requirement</p>
             <KcalcForm data={data} setdata={setdata} calcKilocal={calcKilocal} captureChnage={captureChnage} Pvals={Pvals}/>
             <div className={styles.otherArea}>
                 <h4>You're using the <span> {data?.methodName}</span> formula</h4>

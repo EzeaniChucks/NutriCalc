@@ -1,8 +1,11 @@
 .footer {
   display: flex;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
   flex-direction: column;
   background-color: rgb(1, 37, 61);
-  padding: 10px;
+  padding: 15px;
+  padding-bottom: 30px;
   margin-top: 50px;
   align-items: center;
 }
@@ -14,9 +17,9 @@
 
 .contributors{
   display: flex;
-  font-family:sans-serif;
+  font-family:'Poppins';
   width: 100%;
-  margin-top: 30px;
+  margin-top: 15px;
   justify-content: space-around;
   gap: 1rem;
 }
@@ -54,7 +57,7 @@
   
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .card,
   .footer {
     border-color: #222;
@@ -65,4 +68,4 @@
   .logo img {
     filter: invert(1);
   }
-}
+} */

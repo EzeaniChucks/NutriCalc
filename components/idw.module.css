@@ -31,9 +31,20 @@
   text-transform: capitalize;
   color: rgb(1,37,61);
 }
+.container>div{
+  position: relative;
+}
 .container>div>h3{
+  background-color: rgb(140, 96, 182);
+  color: white;
   font-size: 0.8rem;
-  margin-left: 15px;
+  position: absolute;
+  border-radius: 3px;
+  top: -10px;
+  left: 5px;
+  padding: 0 10px 3px 10px;
+  margin: 0;
+  width: fit-content;
 }
 .container>div>h4{
   color: green;
@@ -61,7 +72,7 @@
   justify-content: space-around;
   border: 1px solid rgb(184, 184, 184);
   padding: 15px 5px 15px 0;
-  margin: 15px 5px;
+  margin: 25px 5px;
   border-radius: 10px;
   box-shadow: 1px 5px 10px gray;
 }
