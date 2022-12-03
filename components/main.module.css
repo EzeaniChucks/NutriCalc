@@ -40,7 +40,7 @@
   margin: 15px 1rem;
   cursor: pointer;
   color: rgb(126, 126, 126);
-  font-size: 1.1rem;
+  font-size: 1rem;
   z-index: 100;
   transition: all 0.2s ease-in-out;
 }

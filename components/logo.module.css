@@ -4,7 +4,7 @@
   gap: 0;
   align-items: center;
   justify-content: center;
-  margin: 100px 0 2rem 0;
+  margin: 50px 0 2rem 0;
 }
 .logoSection h1 {
   color: #783ebb;
@@ -12,22 +12,23 @@
   font-family: 'Poppins';
   font-weight: 1000;
   letter-spacing: 0.4rem;
-  font-size: 2.5rem;
+  font-size: 4rem;
 }
 
 .logoSection h1 span{
   font-style: italic;
   font-weight: bold;
   font-family: serif;
-  font-size: 3rem;
+  font-size: 4rem;
   letter-spacing: 0.1rem;
 }
 .logoSection p {
     margin: 0;
-    margin-top: -15px;
-    margin-left: -20px;
-    font-size: 0.85rem;
+    margin-top: -25px;
+    margin-left: 80px;
+    font-size: 0.9rem;
     color: grey;
+    font-weight: bold;
     letter-spacing: 0.3px;
     font-style:italic;
 }
