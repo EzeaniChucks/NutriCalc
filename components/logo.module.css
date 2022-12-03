@@ -4,7 +4,7 @@
   gap: 0;
   align-items: center;
   justify-content: center;
-  margin: 50px 0 2rem 0;
+  margin: 100px 0 2rem 0;
 }
 .logoSection h1 {
   color: #783ebb;
@@ -24,8 +24,8 @@
 }
 .logoSection p {
     margin: 0;
-    margin-top: -25px;
-    margin-left: 80px;
+    margin-top: -20px;
+    margin-left: 100px;
     font-size: 0.9rem;
     color: grey;
     font-weight: bold;
