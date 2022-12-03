@@ -28,7 +28,7 @@
 
 .calcSection h3{
   font-family: 'Tangerine', cursive;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 5px 0 10px 0;
   text-align: center;
   font-weight: bold;
@@ -40,7 +40,7 @@
   margin: 15px 1rem;
   cursor: pointer;
   color: rgb(126, 126, 126);
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   z-index: 100;
   transition: all 0.2s ease-in-out;
 }

@@ -1,7 +1,7 @@
 .footer {
   display: flex;
-  border-top-left-radius: 5%;
-  border-top-right-radius: 5%;
+  /* border-top-left-radius: 5%;
+  border-top-right-radius: 5%; */
   flex-direction: column;
   background-color: rgb(1, 37, 61);
   padding: 15px;
@@ -12,7 +12,6 @@
 .footer>h3{
   font-size: 1rem;
   color: white;
-  text-decoration: underline;
 }
 
 .contributors{
@@ -36,12 +35,12 @@
   margin: 0;
   margin-bottom: 5px;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: rgb(196, 196, 196);
 }
 .contributors>div>h5{
   margin: 3px 0;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: normal;
   color: rgb(196, 196, 196);
 }
@@ -49,7 +48,6 @@
   margin: 3px 0;
   font-size: 0.75rem;
   font-weight: normal;
-  /* color: rgb(80, 80, 80); */
   color: rgb(196, 196, 196);
 }
 
