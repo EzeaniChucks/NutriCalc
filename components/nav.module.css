@@ -8,6 +8,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 100;
 }
 .nav>p{
     margin: 0;
@@ -38,13 +39,13 @@
     color: rgb(172, 129, 221);
 }
 .nav button{
-    width: 55px;
+    width: 75px;
     background-color: transparent;
     cursor: pointer;
     padding: 3px 4px;
     text-align: center;
     margin: 0;
-    border-radius: 3px;
+    border-radius: 5px;
     color: rgb(104, 22, 199);
     border: 1px solid;
     align-self: center;

@@ -206,7 +206,7 @@ const Energ =()=>{
                     <p className={styles.warningInf}>NOTE: {data?.warningInfo}</p>
                 }
                 <div className={styles.methodContainer}>
-                    <p>Compare results with other formualae</p>
+                    <p>Compare results with other formulae</p>
                     <div id='methodBtns' className={styles.methodList}>
                         <p id='methodBtnIM' className={styles.kid} onClick={handleIM}>Institute of medicine</p>
                         <p className={styles.kid} onClick={handleHO}>Henry Oxford</p>

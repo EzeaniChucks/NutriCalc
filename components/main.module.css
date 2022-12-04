@@ -49,9 +49,9 @@
   margin-right: 10px;
 }
 .calcSection p:hover{
-  margin-left: 1.3rem;
+  margin-left: 1.5rem;
   color: black;
-  transform: scale(105%);
+  /* transform: scale(105%); */
 }
 .calcSection hr{
   margin: 0px 2rem 0 3rem;

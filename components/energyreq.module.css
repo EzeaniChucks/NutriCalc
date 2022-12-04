@@ -144,6 +144,17 @@
   color: green;
 }
 
+.extraInf{
+  text-align: left;
+  padding: 25px 0 0 15px;
+  line-height: 20px;
+  font-size: 0.8rem;
+  color: rgb(4, 114, 165);
+}
+.extraInf span:hover{
+  cursor: pointer;
+}
+
 .methodContainer{
   display: flex;
   flex-direction: column;

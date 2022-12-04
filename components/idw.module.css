@@ -23,6 +23,16 @@
 .container{
   width: 50%;
 }
+.container .imgDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .imgDiv>img{
+  width: 200px;
+  height: 125px;
+  /* border-radius: 10%; */
+}
 .container>p{
   text-align: center;
   margin-bottom: 30px;
@@ -40,9 +50,9 @@
   font-size: 0.8rem;
   position: absolute;
   border-radius: 3px;
-  top: -10px;
-  left: 5px;
-  padding: 0 10px 3px 10px;
+  top: -8px;
+  left: 6px;
+  padding: 3px 10px 3px 10px;
   margin: 0;
   width: fit-content;
 }
@@ -52,6 +62,10 @@
   text-align: center;
   margin: 10px 10px;
   font-size: 0.9rem;
+}
+.container>div>h5{
+  margin: 10px;
+  color: grey;
 }
 .main .error{
   color: tomato;

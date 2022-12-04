@@ -3,23 +3,7 @@ import IDWFORM from "./forms/IDWform";
 import IDWFormKids from "./forms/IWDFormKids";
 import styles from "./idw.module.css";
 import { reducer } from '../reducer/IBWReducer';
-
-const defaultState ={
-    index:0,
-    height:0,
-    age:0,
-    sex:'',
-    resultAdult:0,
-    childheight:0,
-    childage:0,
-    childgender:'',
-    childresult:0,
-    childageindicator:'month',
-    childheightindicator:'cm',
-    warning:'',
-    error:'',
-    errorAdult:''
-}
+import { defaultState } from '../defaultStates/defaultState';
 
 const IdealBodyWeight =()=>{
     const [state, dispatch] = useReducer(reducer, defaultState);
@@ -34,7 +18,7 @@ const IdealBodyWeight =()=>{
 
     const genResultKid =()=>{
         // console.log(document.querySelector('#childageid').options[state.index]);
-        const { childage, childageindicator } = state;
+        const { childage, childageindicator, childgender } = state;
         let idwKid = 0
          if(childage>11 && childageindicator==='month') {
             return dispatch({type:'ERROR', payload:`Instead of ${childage} months, enter age as ${Math.floor(childage/12)} year(s) and try again`})
@@ -47,7 +31,7 @@ const IdealBodyWeight =()=>{
         }
 
         if(childage<=11 && childageindicator==='month') {
-            idwKid = (Number(childage)+8)/2;
+            idwKid = ((Number(childage)+8.5)/2).toFixed(1);
             return dispatch({ type: "GEN_RESULT_CHILD", payload: idwKid });
         }
         if(childage>=1 && childage<=5 && childageindicator==='year') {
@@ -59,8 +43,14 @@ const IdealBodyWeight =()=>{
             return dispatch({ type: "GEN_RESULT_CHILD", payload: idwKid });
         }
         if(childage>14 && childage<=17 && childageindicator==='year') {
-            idwKid = 4*(Number(childage))
-            return dispatch({ type: "GEN_RESULT_CHILD", payload: idwKid });
+            if(childgender ==='male'){
+                idwKid = 3.8 * Number(childage);
+                return dispatch({ type: "GEN_RESULT_CHILD", payload: idwKid });
+            }
+            if(childgender ==='female'){
+                idwKid = 3.34*(Number(childage))
+                return dispatch({ type: "GEN_RESULT_CHILD", payload: idwKid });
+            }
         }
     }
     const genResult =()=>{
@@ -88,7 +78,7 @@ const IdealBodyWeight =()=>{
                     {state.resultAdult>0&&
                     (<>
                         <h4>Your Ideal Weight is: <span>{state.resultAdult.toFixed(1)} kg</span></h4>
-                        <h4>A BMI of: <span>{(state.resultAdult/state.height**2).toFixed(2)} kg/m<sup>2</sup></span> is recommended for you</h4>
+                        <h4>This also means your BMI should be <span>{(state.resultAdult/state.height**2).toFixed(2)} kg/m<sup>2</sup></span></h4>
                     </>)}
                     <h4 className={styles.error}>{state.errorAdult}</h4>
                 </div>

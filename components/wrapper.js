@@ -7,10 +7,13 @@ const Wrapper =({children})=>{
     return (
       <>
         <Head>
-          <title>EnCalc</title>
+          <title>Calorie|Protein requirement|Fat or Fat-free mass|EnCalc</title>
           <meta
             name="description"
-            content="Get the most accurate estimated enery requirements and do much more with Encalc"
+            content="Estimate energy, protein and micronutrient requirements. Know your ideal or normal body weight and do much more with Encalc"
+          />
+          <meta name="keywords"
+            content='energy requirement, paediatrics, 24 hour dietary recall, calorie, muscle mass, fat free mass, protein, calculator,'
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
