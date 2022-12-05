@@ -63,18 +63,22 @@
   margin: 10px 10px;
   font-size: 0.9rem;
 }
-.container>div>h5{
-  margin: 10px;
-  color: grey;
-}
-.main .error{
-  color: tomato;
-}
 .container>div>h4>span{
   color: rgb(4, 112, 4);
   padding: 2px 3px;
   background-color: rgb(215, 248, 220);
 }
+.container>div>h5{
+  margin: 10px;
+  color: grey;
+}
+.container>div>h5>span{
+  color: tomato;
+}
+.main .error{
+  color: tomato;
+}
+
 .main hr{
   border: 1px solid rgb(49, 105, 226);
   margin: 30px 30% 20px 30%;
