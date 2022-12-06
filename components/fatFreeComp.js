@@ -1,61 +1,62 @@
 import styles from "./idw.module.css";
-import styles2 from "./energyreq.module.css";
-import { useEffect, useState } from "react";
-// import HeightForm from "./forms/heightForm";
+import { useState } from "react";
 import FatMassForm from "./forms/FatMassForm";
+import {useRouter} from 'next/router';
 
 const FatFreeComp = () => {
-  const [data, setdata] = useState({
-    age: 0,
-    sex: "",
-    height:0,
-    waistCir:0,
-    heightUnit:'centimeters',
-    waistUnit:'centimeters',
-    error: "",
-    warning: "",
-    fatMass: 0,
-    fatFreeMass:0,
-    dryMass:0,
-    waterPercent:0,
-  });
 
-  const captureChange = (e) => {
-    const { name, value, checked } = e.target;
-    setdata({ ...data, [name]: value, fatMass: 0 });
-    if (checked && name === "sex") setdata({ ...data, sex: value, fatMass: 0 });
-  };
+    const router = useRouter();
+
+    const [data, setdata] = useState({
+        age: 0,
+        sex: "",
+        height:0,
+        waistCir:0,
+        heightUnit:'centimeters',
+        waistUnit:'centimeters',
+        error: "",
+        warning: "",
+        fatMass: 0,
+        fatFreeMass:0,
+        dryMass:0,
+        waterPercent:0,
+    });
+
+    const captureChange = (e) => {
+        const { name, value, checked } = e.target;
+        setdata({ ...data, [name]: value, fatMass: 0 });
+        if (checked && name === "sex") setdata({ ...data, sex: value, fatMass: 0 });
+    };
 
   const genResultLength = () => {
-    const {sex, height, waistCir, heightUnit, waistUnit} = data;
-    console.log(data)
-    if (sex == "") {
-      return setdata({ ...data, error: `Gender must be set` });
-    }
-    if (heightUnit !== waistUnit) {
-      return setdata({ ...data, error: `Height and waist circumference must have the same unit` });
-    }
-    if(height<20 && heightUnit ==='centimeters'){
-        return setdata({ ...data, error: `You must have chosen the wrong unit for height. Height cannot be ${data.height} centimeters`});
-    }
-    if(height>2.5 && heightUnit ==='meters'){
-        return setdata({ ...data, error: `You must have chosen the wrong unit for height. Height cannot be ${data.height} meters`});
-    }
-    if (sex==='male'){
-        const fatMass = (64 - (20*(height/waistCir))).toFixed(2)
-        const fatFreeMass = (100- fatMass).toFixed(2)
-        const dryMass = (fatFreeMass - ((73.8/100)*fatFreeMass)).toFixed(2)
-        const waterPercent = (fatFreeMass - dryMass).toFixed(2)
-        setdata({...data, fatMass, fatFreeMass, waterPercent, dryMass, error:''})
-    }
-    if (sex==='female'){
-        const fatMass = (76 - (20*height/waistCir)).toFixed(2)
-        const fatFreeMass = (100- fatMass).toFixed(2)
-        const dryMass = (fatFreeMass - ((73.8/100)*fatFreeMass)).toFixed(2)
-        const waterPercent = (fatFreeMass - dryMass).toFixed(2)
-        setdata({...data, fatMass, fatFreeMass, waterPercent, dryMass, error:""})
-    }
-  };
+        const {sex, height, waistCir, heightUnit, waistUnit} = data;
+        if (sex == "") {
+        return setdata({ ...data, error: `Gender must be set` });
+        }
+        if (heightUnit !== waistUnit) {
+        return setdata({ ...data, error: `Height and waist circumference must have the same unit` });
+        }
+        if(height<20 && heightUnit ==='centimeters'){
+            return setdata({ ...data, error: `You must have chosen the wrong unit for height. Height cannot be ${data.height} centimeters`});
+        }
+        if(height>2.5 && heightUnit ==='meters'){
+            return setdata({ ...data, error: `You must have chosen the wrong unit for height. Height cannot be ${data.height} meters`});
+        }
+        if (sex==='male'){
+            const fatMass = (64 - (20*(height/waistCir))).toFixed(2)
+            const fatFreeMass = (100- fatMass).toFixed(2)
+            const dryMass = (fatFreeMass - ((73.8/100)*fatFreeMass)).toFixed(2)
+            const waterPercent = (fatFreeMass - dryMass).toFixed(2)
+            setdata({...data, fatMass, fatFreeMass, waterPercent, dryMass, error:''})
+        }
+        if (sex==='female'){
+            const fatMass = (76 - (20*height/waistCir)).toFixed(2)
+            const fatFreeMass = (100- fatMass).toFixed(2)
+            const dryMass = (fatFreeMass - ((73.8/100)*fatFreeMass)).toFixed(2)
+            const waterPercent = (fatFreeMass - dryMass).toFixed(2)
+            setdata({...data, fatMass, fatFreeMass, waterPercent, dryMass, error:""})
+        }
+    };
 
     return (
         <div className={styles.main}>
@@ -80,15 +81,24 @@ const FatFreeComp = () => {
                     </div>
                 )}
                     
-                    <h5>
-                        All that is required to estimate your fat mass (and general body composition) is a tape measure.
-                    </h5>
-                    <h5>
-                        First get your height, then your waist circumference. To get the best results for your waist,
-                        put the tape measure at the top of your hip bone and wrap it around your body.
-                        According to Cedars Sinai (the creators of the formula behind this method), you may measure your height and waist circumference in any units you want.
-                        Just make sure both height and waist circumference are in the same units.
-                    </h5>
+                    {data.fatFreeMass>0 && 
+                        <h5 style={{textAlign:'center', cursor:'pointer'}}>
+                            Want to know what your normal body fat percentage should be?
+                            Visit our <span onClick={()=>router.push('/faq')}>FAQ</span>
+                        </h5>
+                    }
+                    {data.fatMass==0 &&<>
+                        <h5>
+                            All that is required to estimate your fat mass (and general body composition) is a tape measure.
+                        </h5>
+                        <h5>
+                            First get your height, then your waist circumference. To get the best results for your waist,
+                            put the tape measure at the top of your hip bone and wrap it around your body.
+                            According to Cedars Sinai (the creators of the formula behind this method), you may measure your height and waist circumference in any units you want.
+                            Just make sure both height and waist circumference are in the same units.
+                        </h5>
+                    </>
+                    }
             </div>
         </div>
         </div>
