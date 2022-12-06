@@ -1,6 +1,6 @@
 import styles from "./idw.module.css";
 import styles2 from './energyreq.module.css';
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useState } from "react";
 import HeightForm from "./forms/heightForm";
 
 const EstimateHeightComp = () => {
@@ -37,21 +37,21 @@ const EstimateHeightComp = () => {
             if (sex==='male'){
                 if(age<65){
                     let result = (79.2 +(3.6*ulnalength)).toFixed(2)
-                    setdata({...data, result})
+                    setdata({...data, result, error:''})
                 }
                 if(age>=65){
                     let result = (86.3 +(3.15*ulnalength)).toFixed(2)
-                    setdata({...data, result})
+                    setdata({...data, result, error:''})
                 }
             }
             if (sex==='female'){
                 if(age<65){
                     let result = (95.6 +(2.77*ulnalength)).toFixed(2)
-                    setdata({...data, result})
+                    setdata({...data, result, error:''})
                 }
                 if(age>=65){
                     let result = (80.4 +(3.25*ulnalength)).toFixed(2)
-                    setdata({...data, result})
+                    setdata({...data, result, error:''})
                 }
             }
         }
@@ -98,21 +98,21 @@ const EstimateHeightComp = () => {
             if (sex==='male'){
                 if(age>=18&& age<=60){
                     let result = (71.85 +(1.88*kneelength)).toFixed(2)
-                    setdata({...data, result})
+                    setdata({...data, result, error:''})
                 }
                 if(age>60 && age<=90){
                     let result = (59.01 +(2.08*kneelength)).toFixed(2)
-                    setdata({...data, result})
+                    setdata({...data, result, error:''})
                 }
             }
             if (sex==='female'){
                 if (age >= 18 && age <= 60) {
                   let result = (67.85 + 1.87 * kneelength).toFixed(2);
-                  setdata({ ...data, result });
+                  setdata({ ...data, result, error:''});
                 }
                 if (age > 60 && age <= 90) {
                   let result = (62.25 + 1.91 * kneelength).toFixed(2);
-                  setdata({ ...data, result });
+                  setdata({ ...data, result, error:''});
                 }
             }
         }
