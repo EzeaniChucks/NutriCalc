@@ -17,3 +17,19 @@ export const defaultState = {
   error: "",
   errorAdult: "",
 };
+
+export const twenty4DefaultState = {
+  searchList: [],
+  chosenFood: "",
+  foodTime: "breakfast",
+  foodAmount: 0,
+  breakfastArr: [],
+  postBreakfastArr: [],
+  lunchArr: [],
+  postLunchArr: [],
+  dinnerArr: [],
+  postDinnerArr: [],
+  result: [],
+  warning: "",
+  success: "",
+};

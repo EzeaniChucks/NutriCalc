@@ -1,0 +1,28 @@
+.foodDisplay{
+    margin: 20px 0;
+    box-shadow: 1px 1px 20px grey;
+    padding: 5px 10px;
+}
+
+.breakfast,
+.midBreakfast,
+.lunch,
+.midLunch,
+.dinner,
+.postDinner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:10px;
+    padding:2px 5px 0 10px;
+}
+
+.breakfast,
+.lunch,
+.dinner{
+    background-color: rgb(231, 216, 255);
+}
+.midBreakfast,
+.midLunch,
+.postDinner{
+    background-color: rgb(255, 241, 244);
+}
