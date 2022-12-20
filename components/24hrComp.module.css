@@ -30,16 +30,21 @@
 .container label:nth-of-type(2) div p{
     margin: 5px;
 }
+.container label>div{
+    width: 250px;
+}
 .container input{
     outline: none;
     font-family: 'Poppins' sans-serif;
     padding: 5px;
     font-size: 0.9rem;
+    width: 250px;
 }
 .container select{
     outline: none;
     font-family: 'Poppins' sans-serif;
     padding: 5px;
+    width: 250px;
     font-size: 0.9rem;
 }
 .container button{
