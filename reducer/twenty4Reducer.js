@@ -46,7 +46,7 @@ export const Twenty4Reducer = (state, action) => {
           ...state,
           postBreakfastArr: [...state.postBreakfastArr, action.payload],
           warning: "",
-          success: "Item added",
+          success: `Item added to ${action.name}`,
         };
       }
     }
@@ -65,7 +65,7 @@ export const Twenty4Reducer = (state, action) => {
           ...state,
           lunchArr: [...state.lunchArr, action.payload],
           warning: "",
-          success: "Item added",
+          success: `Item added to ${action.name}`,
         };
       }
     }
@@ -84,7 +84,7 @@ export const Twenty4Reducer = (state, action) => {
           ...state,
           postLunchArr: [...state.postLunchArr, action.payload],
           warning: "",
-          success: "Item added",
+          success: `Item added to ${action.name}`,
         };
       }
     }
@@ -103,7 +103,7 @@ export const Twenty4Reducer = (state, action) => {
           ...state,
           dinnerArr: [...state.dinnerArr, action.payload],
           warning: "",
-          success: "Item added",
+          success: `Item added to ${action.name}`,
         };
       }
     }
@@ -122,7 +122,7 @@ export const Twenty4Reducer = (state, action) => {
           ...state,
           postDinnerArr: [...state.postDinnerArr, action.payload],
           warning: "",
-          success: "Item added",
+          success: `Item added to ${action.name}`,
         };
       }
     }
@@ -136,7 +136,10 @@ export const Twenty4Reducer = (state, action) => {
   if (action.type === "SUCCESS") {
     return { ...state, success: action.payload };
   }
-  if (action.type === "RESET") {
+  if (action.type === "RESET_NOTICES") {
     return { ...state, warning: "", success: "" };
+  }
+  if (action.type === "RESET_VALUES") {
+    return { ...state, foodAmount: 0, chosenFood: "" };
   }
 };

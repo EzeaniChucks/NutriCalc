@@ -50,6 +50,7 @@ const TwentyFourComp = () => {
       });
       dispatch({ type: "CHOSEN_VALUE", payload: value });
       dispatch({ type: "FOODLIST_FILTER", payload: filteredSearch });
+      dispatch({ type: "ERROR", payload: `` });
       if (value === "") dispatch({ type: "FOODLIST_FILTER", payload: [] });
     }
     if (name === "foodSelect") {
@@ -88,18 +89,27 @@ const TwentyFourComp = () => {
         return item.SearchName.toLowerCase().includes(state.chosenFood);
       }); //get entire object with value typed in input a.k.a chosenFood
 
+      if (!itemToAdd) {
+        return dispatch({
+          type: "ERROR",
+          payload: `This food item isn't on our database yet. Use another search word or kindly submit the food's name in our Suggestion Section.
+          We'll make it available for your use.`,
+        });
+        // return console.log(`Food isn't yet on database`);
+      }
       dispatch({
         type: "ADD_FOODS",
         name: state.foodTime,
         payload: { ...initial, ...itemToAdd, amountEaten: state.foodAmount },
       });
+      dispatch({ type: "RESET_VALUES" });
       runCallBack();
     }
   };
 
   const runCallBack = useCallback(() => {
     return setTimeout(() => {
-      dispatch({ type: "RESET" });
+      dispatch({ type: "RESET_NOTICES" });
     }, 3000);
   }, [state.success, state.warning]);
 
@@ -113,6 +123,7 @@ const TwentyFourComp = () => {
             onChange={handleChange}
             onClick={handleInputClick}
             type="text"
+            autoComplete="off"
             placeholder="Search Any Food"
             name="textSearch"
             value={state?.chosenFood}
@@ -228,13 +239,11 @@ const TwentyFourComp = () => {
               </div>
             );
           })}
-        <h3>
-          Save result to Result List?{" "}
-          <span>
-            (You may need to export entire list to Excel. Or reference client
-            data for future use)
-          </span>
-        </h3>
+        <h3>Save result to Result List? </h3>
+        <h4>
+          (You may need to export this list to an Excel Sheet for nutrient
+          analysis, or reference client data for future use)
+        </h4>
       </div>
     </div>
   );

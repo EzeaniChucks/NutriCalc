@@ -129,13 +129,13 @@ const FoodDisplay = React.memo(
                   return (
                     <p key={item.Id}>
                       ({index + 1}) {item.amountEaten}g of{" "}
-                      {item.SearchName.slice(0, 30)}. . .
+                      {item.SearchName.slice(0, 30)}...
                     </p>
                   );
                 })}
               </div>
             ) : (
-              <p>No items added yet</p>
+              <p>- - -</p>
             )}
           </div>
           <div className={styles.midBreakfast}>
@@ -152,7 +152,7 @@ const FoodDisplay = React.memo(
                 })}
               </div>
             ) : (
-              <p>No items added yet</p>
+              <p>- - -</p>
             )}
           </div>
           <div className={styles.lunch}>
@@ -169,7 +169,7 @@ const FoodDisplay = React.memo(
                 })}
               </div>
             ) : (
-              <p>No items added yet</p>
+              <p>- - -</p>
             )}
           </div>
           <div className={styles.midLunch}>
@@ -186,7 +186,7 @@ const FoodDisplay = React.memo(
                 })}
               </div>
             ) : (
-              <p>No items added yet</p>
+              <p>- - -</p>
             )}
           </div>
           <div className={styles.dinner}>
@@ -203,7 +203,7 @@ const FoodDisplay = React.memo(
                 })}
               </div>
             ) : (
-              <p>No items added yet</p>
+              <p>- - -</p>
             )}
           </div>
           <div className={styles.postDinner}>
@@ -220,7 +220,7 @@ const FoodDisplay = React.memo(
                 })}
               </div>
             ) : (
-              <p>No items added yet</p>
+              <p>- - -</p>
             )}
           </div>
         </div>
