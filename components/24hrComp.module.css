@@ -47,6 +47,14 @@
     width: 250px;
     font-size: 0.9rem;
 }
+.container .warning{
+    color: tomato;
+    text-align: center;
+}
+.container .success{
+    color: rgb(0, 145, 0);
+    text-align: center;
+}
 .container button{
     background-color: rgb(139, 54, 219);
     color: white;
@@ -89,7 +97,7 @@
 
 .main .searchList{
     position: absolute;
-    width: 67%;
+    width: 250px;
     top: 120px;
     right: 0;
     height: 20rem;

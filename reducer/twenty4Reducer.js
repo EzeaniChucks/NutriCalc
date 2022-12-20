@@ -27,7 +27,7 @@ export const Twenty4Reducer = (state, action) => {
           ...state,
           breakfastArr: [...state.breakfastArr, action.payload],
           warning: "",
-          success: "Item added",
+          success: `Item added to ${action.name}`,
         };
       }
     }
@@ -129,5 +129,14 @@ export const Twenty4Reducer = (state, action) => {
   }
   if (action.type === "RESULT") {
     return { ...state, result: [action.payload] };
+  }
+  if (action.type === "ERROR") {
+    return { ...state, warning: action.payload };
+  }
+  if (action.type === "SUCCESS") {
+    return { ...state, success: action.payload };
+  }
+  if (action.type === "RESET") {
+    return { ...state, warning: "", success: "" };
   }
 };

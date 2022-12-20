@@ -1,6 +1,6 @@
 import styles from "./24hrComp.module.css";
 import { foodData } from "../utils/data";
-import { useEffect, useReducer } from "react";
+import { useCallback, useEffect, useReducer } from "react";
 import { Twenty4Reducer } from "../reducer/twenty4Reducer";
 import { twenty4DefaultState } from "../defaultStates/defaultState";
 import FoodDisplay from "./FoodDisplay";
@@ -13,7 +13,31 @@ const allNameArray = foodData
     return [...strArr];
   })
   .flat();
-
+const initial = {
+  ENERC_kJ: 0,
+  ENERC_kcal: 0,
+  WATER_g: 0,
+  PROTCNT_g: 0,
+  FATCE_g: 0,
+  CHOCDF_g: 0,
+  FIB_g: 0,
+  ASH_g: 0,
+  Ca_mg: 0,
+  Fe_mg: 0,
+  Mg_mg: 0,
+  P_mg: 0,
+  K_mg: 0,
+  Na_mg: 0,
+  Zn_mg: 0,
+  Cu_mg: 0,
+  VITE_mg: 0,
+  THIA_mg: 0,
+  RIBF_mg: 0,
+  NIAEQ_mg: 0,
+  VIT_B6_mg: 0,
+  FOL_mcg: 0,
+};
+//component
 const TwentyFourComp = () => {
   const [state, dispatch] = useReducer(Twenty4Reducer, twenty4DefaultState);
   const handleChange = (e) => {
@@ -45,21 +69,39 @@ const TwentyFourComp = () => {
     dispatch({ type: "FOODLIST_FILTER", payload: [] });
   };
   const handleAddition = () => {
+    if (state.chosenFood.length === 0) {
+      dispatch({
+        type: "ERROR",
+        payload: "Search or type a food to continue",
+      });
+      return runCallBack();
+    }
+    if (state.foodAmount === 0 || state.foodAmount === "") {
+      dispatch({
+        type: "ERROR",
+        payload: "Food weight can't be zero grams",
+      });
+      return runCallBack();
+    }
     if (state.chosenFood.length > 0) {
       const itemToAdd = foodData.find((item) => {
         return item.SearchName.toLowerCase().includes(state.chosenFood);
-      });
+      }); //get entire object with value typed in input a.k.a chosenFood
+
       dispatch({
         type: "ADD_FOODS",
         name: state.foodTime,
-        payload: { ...itemToAdd, amountEaten: state.foodAmount },
+        payload: { ...initial, ...itemToAdd, amountEaten: state.foodAmount },
       });
+      runCallBack();
     }
   };
 
-  // useEffect(() => {
-  //   console.log(state.breakfastArr);
-  // }, [state.breakfastArr]);
+  const runCallBack = useCallback(() => {
+    return setTimeout(() => {
+      dispatch({ type: "RESET" });
+    }, 3000);
+  }, [state.success, state.warning]);
 
   return (
     <div className={styles.main} onClick={handleInputClick}>
@@ -110,12 +152,12 @@ const TwentyFourComp = () => {
             <option value="postDinner">Post-Dinner</option>
           </select>
         </label>
-        {state.warning && <p>{state.warning}</p>}
-        {state.success && <p>{state.success}</p>}
+        {state.warning && <p className={styles.warning}>{state.warning}</p>}
+        {state.success && <p className={styles.success}>{state.success}</p>}
         <button onClick={handleAddition}>Add item to {state.foodTime}</button>
         <FoodDisplay {...state} dispatch={dispatch} />
         <h4 className={styles.heading}>Result</h4>
-        {state?.result[0]?.ENERC_kJ > 0 &&
+        {state?.result?.length > 0 &&
           state.result.map((obj, index) => {
             return (
               <div className={styles.result} key={index}>
