@@ -167,85 +167,90 @@ const TwentyFourComp = () => {
         </label>
         {state.warning && <p className={styles.warning}>{state.warning}</p>}
         {state.success && <p className={styles.success}>{state.success}</p>}
-        <button onClick={handleAddition}>Add item to {state.foodTime}</button>
+        <label>
+          <button onClick={handleAddition}>Add item to {state.foodTime}</button>
+        </label>
         <FoodDisplay {...state} dispatch={dispatch} />
-        <h4 className={styles.heading}>Result</h4>
-        {state?.result?.length > 0 &&
-          state.result.map((obj, index) => {
-            return (
-              <div className={styles.result} key={index}>
-                <p>
-                  Energy: <span>{obj.ENERC_kcal.toFixed(2)} kcal/</span>
-                  <span>{obj.ENERC_kJ.toFixed(2)} kJ</span>
-                </p>
-                <p>
-                  Carbs: <span>{obj.CHOCDF_g.toFixed(2)} g</span>
-                </p>
-                <p>
-                  Protein: <span>{obj.PROTCNT_g.toFixed(2)} g</span>
-                </p>
-                <p>
-                  Fat: <span>{obj.FATCE_g.toFixed(2)} g</span>
-                </p>
-                <p>
-                  Ash: <span>{obj.ASH_g.toFixed(2)} g</span>
-                </p>
-                <p>
-                  Calcium: <span>{obj.Ca_mg.toFixed(2)} mg</span>
-                </p>
-                <p>
-                  Copper: <span>{obj.Cu_mg.toFixed(2)} mg</span>
-                </p>
-                <p>
-                  Fibre: <span>{obj.FIB_g.toFixed(2)} g</span>
-                </p>
-                <p>
-                  Folate: <span>{obj.FOL_mcg.toFixed(2)} mcg</span>
-                </p>
-                <p>
-                  Iron: <span>{obj.Fe_mg.toFixed(2)} mg</span>
-                </p>
-                <p>
-                  Potassium: <span>{obj.K_mg.toFixed(2)} mg</span>
-                </p>
-                <p>
-                  Magnesium: <span>{obj.Mg_mg.toFixed(2)} mg</span>
-                </p>
-                <p>
-                  Niacin: <span>{obj.NIAEQ_mg.toFixed(2)} mgEq</span>
-                </p>
-                <p>
-                  Sodium: <span>{obj.Na_mg.toFixed(2)} mg</span>
-                </p>
-                <p>
-                  Phosphorus: <span>{obj.P_mg.toFixed(2)} mg</span>
-                </p>
-                <p>
-                  Riboflavin: <span>{obj.RIBF_mg.toFixed(2)} mg</span>
-                </p>
-                <p>
-                  Thiamin: <span>{obj.THIA_mg.toFixed(2)} mg</span>
-                </p>
-                <p>
-                  Vit E: <span>{obj.VITE_mg.toFixed(2)} mg</span>
-                </p>
-                <p>
-                  VIT B6: <span>{obj.VIT_B6_mg.toFixed(2)} mg</span>
-                </p>
-                <p>
-                  Water: <span>{obj.WATER_g.toFixed(2)} g</span>
-                </p>
-                <p>
-                  Zinc: <span>{obj.Zn_mg.toFixed(2)} mg</span>
-                </p>
-              </div>
-            );
-          })}
-        <h3>Save result to Result List? </h3>
-        <h4>
-          (You may need to export this list to an Excel Sheet for nutrient
-          analysis, or reference client data for future use)
-        </h4>
+        {state?.result?.length > 0 && (
+          <>
+            <h4 className={styles.heading}>Result</h4>
+            {state.result.map((obj, index) => {
+              return (
+                <div className={styles.result} key={index}>
+                  <p>
+                    Energy: <span>{obj.ENERC_kcal.toFixed(2)} kcal/</span>
+                    <span>{obj.ENERC_kJ.toFixed(2)} kJ</span>
+                  </p>
+                  <p>
+                    Carbs: <span>{obj.CHOCDF_g.toFixed(2)} g</span>
+                  </p>
+                  <p>
+                    Protein: <span>{obj.PROTCNT_g.toFixed(2)} g</span>
+                  </p>
+                  <p>
+                    Fat: <span>{obj.FATCE_g.toFixed(2)} g</span>
+                  </p>
+                  <p>
+                    Ash: <span>{obj.ASH_g.toFixed(2)} g</span>
+                  </p>
+                  <p>
+                    Calcium: <span>{obj.Ca_mg.toFixed(2)} mg</span>
+                  </p>
+                  <p>
+                    Copper: <span>{obj.Cu_mg.toFixed(2)} mg</span>
+                  </p>
+                  <p>
+                    Fibre: <span>{obj.FIB_g.toFixed(2)} g</span>
+                  </p>
+                  <p>
+                    Folate: <span>{obj.FOL_mcg.toFixed(2)} mcg</span>
+                  </p>
+                  <p>
+                    Iron: <span>{obj.Fe_mg.toFixed(2)} mg</span>
+                  </p>
+                  <p>
+                    Potassium: <span>{obj.K_mg.toFixed(2)} mg</span>
+                  </p>
+                  <p>
+                    Magnesium: <span>{obj.Mg_mg.toFixed(2)} mg</span>
+                  </p>
+                  <p>
+                    Niacin: <span>{obj.NIAEQ_mg.toFixed(2)} mgEq</span>
+                  </p>
+                  <p>
+                    Sodium: <span>{obj.Na_mg.toFixed(2)} mg</span>
+                  </p>
+                  <p>
+                    Phosphorus: <span>{obj.P_mg.toFixed(2)} mg</span>
+                  </p>
+                  <p>
+                    Riboflavin: <span>{obj.RIBF_mg.toFixed(2)} mg</span>
+                  </p>
+                  <p>
+                    Thiamin: <span>{obj.THIA_mg.toFixed(2)} mg</span>
+                  </p>
+                  <p>
+                    Vit E: <span>{obj.VITE_mg.toFixed(2)} mg</span>
+                  </p>
+                  <p>
+                    VIT B6: <span>{obj.VIT_B6_mg.toFixed(2)} mg</span>
+                  </p>
+                  <p>
+                    Water: <span>{obj.WATER_g.toFixed(2)} g</span>
+                  </p>
+                  <p>
+                    Zinc: <span>{obj.Zn_mg.toFixed(2)} mg</span>
+                  </p>
+                </div>
+              );
+            })}
+            <h3>Save result to Result List? </h3>
+            <h4>
+              (You may need to export this list to an Excel Sheet for nutrient
+              analysis, or reference client data for future use)
+            </h4>
+          </>
+        )}
       </div>
     </div>
   );

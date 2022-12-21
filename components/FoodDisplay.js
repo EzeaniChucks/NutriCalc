@@ -224,7 +224,11 @@ const FoodDisplay = React.memo(
             )}
           </div>
         </div>
-        <button onClick={handleAnalysis}>Analyse Meal</button>
+        <label>
+          <button className={styles.buttonExtras} onClick={handleAnalysis}>
+            Analyse Meal
+          </button>
+        </label>
       </div>
     );
   }

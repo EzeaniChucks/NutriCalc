@@ -21,6 +21,7 @@
 .container label{
     display: grid;
     grid-template-columns: 1fr 2fr;
+    width: 100%;
 }
 .container label:nth-of-type(2) div{
     display: flex;
@@ -59,10 +60,12 @@
     text-align: center;
 }
 .container button{
+    grid-column: 2/3;
     background-color: rgb(54, 84, 219);
     color: white;
     padding: 10px;
     font-size: 0.75rem;
+    width: 250px;
     border: none;
     word-spacing: 3px;
     cursor: pointer;
@@ -72,6 +75,7 @@
 .container button:active{
     transform: scale(85%);
 }
+
 .container>h3{
     margin: 10px 0;
     text-decoration: underline;

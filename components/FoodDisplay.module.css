@@ -2,6 +2,7 @@
     margin: 20px 0;
     box-shadow: 1px 1px 20px grey;
     padding: 5px 10px;
+    width: 100%;
 }
 
 .breakfast,
@@ -25,4 +26,7 @@
 .midLunch,
 .postDinner{
     background-color: rgb(255, 241, 244);
+}
+.buttonExtras{
+    width: 100%;
 }
