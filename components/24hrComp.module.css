@@ -7,12 +7,15 @@
     position: relative;
     grid-column: 2/3;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
     flex-direction: column;
 }
 .container>.heading{
     background-color: rgb(139, 54, 219);
     color: white;
+    width: 100%;
     padding: 10px;
 }
 .container label{
@@ -56,7 +59,7 @@
     text-align: center;
 }
 .container button{
-    background-color: rgb(139, 54, 219);
+    background-color: rgb(54, 84, 219);
     color: white;
     padding: 10px;
     font-size: 0.75rem;

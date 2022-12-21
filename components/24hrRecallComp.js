@@ -86,7 +86,9 @@ const TwentyFourComp = () => {
     }
     if (state.chosenFood.length > 0) {
       const itemToAdd = foodData.find((item) => {
-        return item.SearchName.toLowerCase().includes(state.chosenFood);
+        return item.SearchName.toLowerCase().includes(
+          state.chosenFood.toLowerCase()
+        );
       }); //get entire object with value typed in input a.k.a chosenFood
 
       if (!itemToAdd) {
