@@ -142,4 +142,10 @@ export const Twenty4Reducer = (state, action) => {
   if (action.type === "RESET_VALUES") {
     return { ...state, foodAmount: 0, chosenFood: "" };
   }
+  if (action.type === "ADDLIST_MODAL") {
+    return { ...state, isAddListModalOpen: !state.isAddListModalOpen };
+  }
+  if (action.type === "VIEWLIST_MODAL") {
+    return { ...state, isViewListModalOpen: !state.isViewListModalOpen };
+  }
 };

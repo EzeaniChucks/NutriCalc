@@ -1,9 +1,10 @@
 import styles from "./24hrComp.module.css";
 import { foodData } from "../utils/data";
-import { useCallback, useEffect, useReducer } from "react";
+import { useCallback, useReducer } from "react";
 import { Twenty4Reducer } from "../reducer/twenty4Reducer";
 import { twenty4DefaultState } from "../defaultStates/defaultState";
 import FoodDisplay from "./FoodDisplay";
+import AddListModal from "./AddListModal";
 
 const allNameArray = foodData
   .map((foodItem) => {
@@ -58,6 +59,9 @@ const TwentyFourComp = () => {
     }
     if (name === "amount") {
       dispatch({ type: "FOOD_AMOUNT", payload: value });
+    }
+    if (name === "clientName") {
+      dispatch({ type: "", payload: value });
     }
   };
 
@@ -118,7 +122,11 @@ const TwentyFourComp = () => {
   return (
     <div className={styles.main} onClick={handleInputClick}>
       <div className={styles.container}>
-        <p className={styles.heading}>Quickly analyze your diet</p>
+        <p className={styles.heading}>Analyze Your Diet</p>
+        <p>
+          Use the form below to add foods to the table beneath, then analyse the
+          table
+        </p>
         <label>
           Food Eaten
           <input
@@ -249,7 +257,23 @@ const TwentyFourComp = () => {
               (You may need to export this list to an Excel Sheet for nutrient
               analysis, or reference client data for future use)
             </h4>
+            <button onClick={() => dispatch({ type: "ADDLIST_MODAL" })}>
+              Save result
+            </button>
           </>
+        )}
+        <h3
+          onClick={() => dispatch({ type: "VIEWLIST_MODAL" })}
+          className={styles.savedList}
+        >
+          View Saved List
+        </h3>
+        {state.isAddListModalOpen && (
+          <AddListModal
+            {...state}
+            dispatch={dispatch}
+            handleChange={handleChange}
+          />
         )}
       </div>
     </div>

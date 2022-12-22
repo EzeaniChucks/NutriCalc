@@ -19,6 +19,7 @@ export const defaultState = {
 };
 
 export const twenty4DefaultState = {
+  clientName: "",
   searchList: [],
   chosenFood: "",
   foodTime: "breakfast",
@@ -30,6 +31,8 @@ export const twenty4DefaultState = {
   dinnerArr: [],
   postDinnerArr: [],
   result: [],
+  isViewListModalOpen: false,
+  isAddListModalOpen: false,
   warning: "",
   success: "",
 };
