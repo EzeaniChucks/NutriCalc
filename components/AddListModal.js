@@ -1,5 +1,5 @@
 import styles from "./24hrComp.module.css";
-import { FaTimes } from "react-icons/fa";
+import { FaTimesCircle } from "react-icons/fa";
 
 const AddListModal = ({ clientName, dispatch, handleChange }) => {
   const handleClientAddition = () => {
@@ -9,12 +9,13 @@ const AddListModal = ({ clientName, dispatch, handleChange }) => {
   };
   return (
     <div className={styles.modalDiv}>
-      <FaTimes onClick={() => dispatch({ type: "ADDLIST_MODAL" })} />
       <div>
+        <FaTimesCircle onClick={() => dispatch({ type: "ADDLIST_MODAL" })} />
         <label>
           Client Name:
           <input
             onChange={handleChange}
+            autoComplete="off"
             name="clientName"
             type="text"
             value={clientName}

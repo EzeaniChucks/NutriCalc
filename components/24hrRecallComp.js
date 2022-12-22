@@ -5,6 +5,7 @@ import { Twenty4Reducer } from "../reducer/twenty4Reducer";
 import { twenty4DefaultState } from "../defaultStates/defaultState";
 import FoodDisplay from "./FoodDisplay";
 import AddListModal from "./AddListModal";
+import ViewListModal from "./ViewListModal";
 
 const allNameArray = foodData
   .map((foodItem) => {
@@ -61,7 +62,7 @@ const TwentyFourComp = () => {
       dispatch({ type: "FOOD_AMOUNT", payload: value });
     }
     if (name === "clientName") {
-      dispatch({ type: "", payload: value });
+      dispatch({ type: "CLIENTNAME", payload: value });
     }
   };
 
@@ -117,7 +118,7 @@ const TwentyFourComp = () => {
     return setTimeout(() => {
       dispatch({ type: "RESET_NOTICES" });
     }, 3000);
-  }, [state.success, state.warning]);
+  }, [state?.success, state?.warning]);
 
   return (
     <div className={styles.main} onClick={handleInputClick}>
@@ -270,6 +271,13 @@ const TwentyFourComp = () => {
         </h3>
         {state.isAddListModalOpen && (
           <AddListModal
+            {...state}
+            dispatch={dispatch}
+            handleChange={handleChange}
+          />
+        )}
+        {state.isViewListModalOpen && (
+          <ViewListModal
             {...state}
             dispatch={dispatch}
             handleChange={handleChange}

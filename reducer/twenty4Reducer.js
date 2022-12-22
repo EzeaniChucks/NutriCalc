@@ -11,6 +11,10 @@ export const Twenty4Reducer = (state, action) => {
   if (action.type === "FOOD_AMOUNT") {
     return { ...state, foodAmount: action.payload };
   }
+  if (action.type === "CLIENTNAME") {
+    console.log("hittin");
+    return { ...state, clientName: action.payload };
+  }
   if (action.type === "ADD_FOODS") {
     if (action.name === "breakfast") {
       const verifyItem = state.breakfastArr.filter((item) => {
@@ -146,6 +150,7 @@ export const Twenty4Reducer = (state, action) => {
     return { ...state, isAddListModalOpen: !state.isAddListModalOpen };
   }
   if (action.type === "VIEWLIST_MODAL") {
+    console.log("hit");
     return { ...state, isViewListModalOpen: !state.isViewListModalOpen };
   }
 };
