@@ -1231,7 +1231,7 @@ export const foodData = [
     Category: "Starchy Roots And Tubers",
     LocalName: "Eba(Yoruba)",
     EnglishName:
-      "Cassava,White, grated, Fermented, dewatered, cooked into paste",
+      "Cassava, White, grated, Fermented, dewatered, cooked into paste",
     Source: "050,033,035,059,097",
     ENERC_kJ: "418.67",
     ENERC_kcal: "98.74",
@@ -1251,7 +1251,7 @@ export const foodData = [
     Cu_mg: "3.04",
     Mn_mg: "0.96",
     SearchName:
-      "Cassava,White, grated, Fermented, dewatered, cooked into paste  Eba(Yoruba)",
+      "Cassava, White, grated, Fermented, dewatered, cooked into paste  Eba(Yoruba)",
   },
   {
     Id: 36,
@@ -1431,7 +1431,7 @@ export const foodData = [
     FOL_mcg: "22",
     VITC_mg: "8",
     SearchName:
-      "Cocoyam,white,fresh,peeled,raw  Gwaza(Hausa), Ede(Igbo), Koko(Yoruba), Ikpon(Ibibio) Xanthosoma spp",
+      "Cocoyam, white, fresh, peeled, raw, Gwaza(Hausa), Ede(Igbo), Koko(Yoruba), Ikpon(Ibibio) Xanthosoma spp",
   },
   {
     Id: 42,

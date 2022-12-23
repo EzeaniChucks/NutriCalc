@@ -12,7 +12,6 @@ export const Twenty4Reducer = (state, action) => {
     return { ...state, foodAmount: action.payload };
   }
   if (action.type === "CLIENTNAME") {
-    console.log("hittin");
     return { ...state, clientName: action.payload };
   }
   if (action.type === "ADD_FOODS") {
@@ -129,6 +128,52 @@ export const Twenty4Reducer = (state, action) => {
           success: `Item added to ${action.name}`,
         };
       }
+    }
+  }
+  if (action.type === "DELETE_FOODS") {
+    if (action.name === "breakfast") {
+      return {
+        ...state,
+        breakfastArr: state.breakfastArr.filter(
+          (item) => item.Id !== action.payload
+        ),
+      };
+    }
+    if (action.name === "postBreakfast") {
+      return {
+        ...state,
+        postBreakfastArr: state.postBreakfastArr.filter(
+          (item) => item.Id !== action.payload
+        ),
+      };
+    }
+    if (action.name === "lunch") {
+      return {
+        ...state,
+        lunchArr: state.lunchArr.filter((item) => item.Id !== action.payload),
+      };
+    }
+    if (action.name === "postLunch") {
+      return {
+        ...state,
+        postLunchArr: state.postLunchArr.filter(
+          (item) => item.Id !== action.payload
+        ),
+      };
+    }
+    if (action.name === "dinner") {
+      return {
+        ...state,
+        dinnerArr: state.dinnerArr.filter((item) => item.Id !== action.payload),
+      };
+    }
+    if (action.name === "postDinner") {
+      return {
+        ...state,
+        postDinnerArr: state.postDinnerArr.filter(
+          (item) => item.Id !== action.payload
+        ),
+      };
     }
   }
   if (action.type === "RESULT") {

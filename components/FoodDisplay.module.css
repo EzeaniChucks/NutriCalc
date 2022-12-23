@@ -30,3 +30,14 @@
 .buttonExtras{
     width: 100%;
 }
+.delBtn{
+    width: 60px;
+    text-align: center;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    color: white;
+    padding: 1px 5px 3px 5px;
+    margin-left: 10px;
+    background-color: rgb(95, 9, 9);
+    cursor: pointer;
+}

@@ -118,6 +118,9 @@ const FoodDisplay = React.memo(
 
       dispatch({ type: "RESULT", payload: result });
     };
+    const handleDeletion = (itemId, name) => {
+      return dispatch({ type: "DELETE_FOODS", payload: itemId, name });
+    };
     return (
       <div className={styles.foodDisplay}>
         <div>
@@ -126,11 +129,20 @@ const FoodDisplay = React.memo(
             {breakfastArr?.length > 0 ? (
               <div>
                 {breakfastArr.map((item, index) => {
+                  let name = "breakfast";
                   return (
-                    <p key={item.Id}>
-                      ({index + 1}) {item.amountEaten}g of{" "}
-                      {item.SearchName.slice(0, 30)}...
-                    </p>
+                    <div key={item.Id}>
+                      <p>
+                        ({index + 1}) {item.amountEaten}g of{" "}
+                        {item.SearchName.slice(0, 30)}...
+                        <span
+                          onClick={() => handleDeletion(item.Id, name)}
+                          className={styles.delBtn}
+                        >
+                          delete
+                        </span>
+                      </p>
+                    </div>
                   );
                 })}
               </div>
@@ -143,11 +155,20 @@ const FoodDisplay = React.memo(
             {postBreakfastArr?.length > 0 ? (
               <div>
                 {postBreakfastArr.map((item, index) => {
+                  let name = "postBreakfast";
                   return (
-                    <p key={item.Id}>
-                      ({index + 1}) {item.amountEaten}g of{" "}
-                      {item.SearchName.slice(0, 30)}. . .
-                    </p>
+                    <div key={item.Id}>
+                      <p>
+                        ({index + 1}) {item.amountEaten}g of{" "}
+                        {item.SearchName.slice(0, 30)}. . .
+                        <span
+                          onClick={() => handleDeletion(item.Id, name)}
+                          className={styles.delBtn}
+                        >
+                          delete
+                        </span>
+                      </p>
+                    </div>
                   );
                 })}
               </div>
@@ -160,11 +181,20 @@ const FoodDisplay = React.memo(
             {lunchArr?.length > 0 ? (
               <div>
                 {lunchArr.map((item, index) => {
+                  let name = "lunch";
                   return (
-                    <p key={item.Id}>
-                      ({index + 1}) {item.amountEaten}g of{" "}
-                      {item.SearchName.slice(0, 30)}. . .
-                    </p>
+                    <div key={item.Id}>
+                      <p>
+                        ({index + 1}) {item.amountEaten}g of{" "}
+                        {item.SearchName.slice(0, 30)}. . .
+                        <span
+                          onClick={() => handleDeletion(item.Id, name)}
+                          className={styles.delBtn}
+                        >
+                          delete
+                        </span>
+                      </p>
+                    </div>
                   );
                 })}
               </div>
@@ -177,11 +207,20 @@ const FoodDisplay = React.memo(
             {postLunchArr?.length > 0 ? (
               <div>
                 {postLunchArr.map((item, index) => {
+                  let name = "postLunch";
                   return (
-                    <p key={item.Id}>
-                      ({index + 1}) {item.amountEaten}g of{" "}
-                      {item.SearchName.slice(0, 30)}. . .
-                    </p>
+                    <div key={item.Id}>
+                      <p>
+                        ({index + 1}) {item.amountEaten}g of{" "}
+                        {item.SearchName.slice(0, 30)}. . .
+                        <span
+                          onClick={() => handleDeletion(item.Id, name)}
+                          className={styles.delBtn}
+                        >
+                          delete
+                        </span>
+                      </p>
+                    </div>
                   );
                 })}
               </div>
@@ -194,11 +233,20 @@ const FoodDisplay = React.memo(
             {dinnerArr?.length > 0 ? (
               <div>
                 {dinnerArr.map((item, index) => {
+                  let name = "dinner";
                   return (
-                    <p key={item.Id}>
-                      ({index + 1}) {item.amountEaten}g of{" "}
-                      {item.SearchName.slice(0, 30)}. . .
-                    </p>
+                    <div key={item.Id}>
+                      <p>
+                        ({index + 1}) {item.amountEaten}g of{" "}
+                        {item.SearchName.slice(0, 30)}. . .
+                        <span
+                          onClick={() => handleDeletion(item.Id, name)}
+                          className={styles.delBtn}
+                        >
+                          delete
+                        </span>
+                      </p>
+                    </div>
                   );
                 })}
               </div>
@@ -212,10 +260,18 @@ const FoodDisplay = React.memo(
               <div>
                 {postDinnerArr.map((item, index) => {
                   return (
-                    <p key={item.Id}>
-                      ({index + 1}) {item.amountEaten}g of{" "}
-                      {item.SearchName.slice(0, 30)}. . .
-                    </p>
+                    <div key={item.Id}>
+                      <p>
+                        ({index + 1}) {item.amountEaten}g of{" "}
+                        {item.SearchName.slice(0, 30)}. . .
+                        <span
+                          onClick={() => handleDeletion(item.Id, name)}
+                          className={styles.delBtn}
+                        >
+                          delete
+                        </span>
+                      </p>
+                    </div>
                   );
                 })}
               </div>
