@@ -99,8 +99,8 @@ const TwentyFourComp = () => {
       if (!itemToAdd) {
         return dispatch({
           type: "ERROR",
-          payload: `This food item isn't on our database yet. Use another search word or kindly submit the food's name in our Suggestion Section.
-          We'll make it available for your use.`,
+          payload: `This food item isn't on our database yet. Use another search word or kindly submit the food's name to our Suggestion Section.
+          We'll make it available after receiving your message and that's a promise.`,
         });
         // return console.log(`Food isn't yet on database`);
       }
@@ -135,7 +135,7 @@ const TwentyFourComp = () => {
             onClick={handleInputClick}
             type="text"
             autoComplete="off"
-            placeholder="Search Any Food"
+            placeholder="Search Foods, even with local names"
             name="textSearch"
             value={state?.chosenFood}
           />

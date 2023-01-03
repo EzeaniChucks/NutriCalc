@@ -5602,7 +5602,7 @@ export const foodData = [
     Zn_mg: "7.8",
     Cu_mg: "1.1",
     Mn_mg: "3.1",
-    SearchName: "Cow, Skin, raw  Ponmo(Yoruba) Bos taurus",
+    SearchName: "Cow, meat, Skin, raw  Ponmo(Yoruba) Bos taurus",
   },
   {
     Id: 180,
@@ -5628,7 +5628,7 @@ export const foodData = [
     Zn_mg: "6.79",
     Cu_mg: "0.18",
     Mn_mg: "1.29",
-    SearchName: "Cow skin, thick, boiled, no salt",
+    SearchName: "Cow skin, meat, thick, boiled, no salt",
   },
   {
     Id: 181,
@@ -5663,7 +5663,7 @@ export const foodData = [
     FOL_mcg: "3",
     VITB12_mcg: "9.51",
     VITC_mg: "10.7",
-    SearchName: "Cow,  Brain, raw",
+    SearchName: "Cow,  Brain, raw, meat",
   },
   {
     Id: 182,
@@ -5696,7 +5696,7 @@ export const foodData = [
     FOL_mcg: "3",
     VITB12_mcg: "8.55",
     VITC_mg: "2",
-    SearchName: "Cow,  Heart, raw",
+    SearchName: "Cow,  Heart, raw, meat",
   },
   {
     Id: 183,
@@ -5732,7 +5732,7 @@ export const foodData = [
     FOL_mcg: "98",
     VITB12_mcg: "27.5",
     VITC_mg: "9.4",
-    SearchName: "Cow,  Kidney, raw",
+    SearchName: "Cow,  Kidney, raw, meat",
   },
   {
     Id: 184,
@@ -5769,7 +5769,7 @@ export const foodData = [
     FOL_mcg: "290",
     VITB12_mcg: "59.3",
     VITC_mg: "1.3",
-    SearchName: "Cow,  liver, raw",
+    SearchName: "Cow,  liver, raw, meat",
   },
   {
     Id: 185,
@@ -5802,7 +5802,7 @@ export const foodData = [
     FOL_mcg: "11",
     VITB12_mcg: "3.81",
     VITC_mg: "38.5",
-    SearchName: "Cow,  lungs, raw",
+    SearchName: "Cow,  lungs, raw, meat",
   },
   {
     Id: 186,
@@ -5834,7 +5834,7 @@ export const foodData = [
     FOL_mcg: "7",
     VITB12_mcg: "3.79",
     VITC_mg: "3.1",
-    SearchName: "Cow,  tongue, raw",
+    SearchName: "Cow,  tongue, raw, meat",
   },
   {
     Id: 187,
@@ -5904,7 +5904,7 @@ export const foodData = [
     FOL_mcg: "5",
     VITB12_mcg: "1.21",
     VITC_mg: "3.7",
-    SearchName: "Chicken,Gizzard",
+    SearchName: "Chicken, Gizzard, meat",
   },
   {
     Id: 189,
@@ -5938,7 +5938,7 @@ export const foodData = [
     FOL_mcg: "72",
     VITB12_mcg: "7.29",
     VITC_mg: "3.2",
-    SearchName: "Chicken,  Heart",
+    SearchName: "Chicken, Heart, meat",
   },
   {
     Id: 190,
@@ -5974,7 +5974,7 @@ export const foodData = [
     FOL_mcg: "588",
     VITB12_mcg: "16.58",
     VITC_mg: "17.9",
-    SearchName: "Chicken,  Liver",
+    SearchName: "Chicken,  Liver, meat",
   },
   {
     Id: 191,
@@ -5999,7 +5999,7 @@ export const foodData = [
     VIT_B6_mg: "0.47",
     FOL_mcg: "6",
     VITB12_mcg: "0.33",
-    SearchName: "Roasted chicken",
+    SearchName: "Roasted chicken, meat",
   },
   {
     Id: 192,
@@ -6067,7 +6067,7 @@ export const foodData = [
     FOL_mcg: "5",
     VITB12_mcg: "1.13",
     SearchName:
-      "Goat,  Raw  Eran ewure(Yoruba), Ebot(Ibibio) Capre aegagrus hircus",
+      "Goat, meat, Raw  Eran ewure(Yoruba), Ebot(Ibibio) Capre aegagrus hircus,",
   },
   {
     Id: 194,
@@ -6126,7 +6126,7 @@ export const foodData = [
     RIBF_mg: "0.15",
     VITB12_mcg: "13.2",
     SearchName:
-      "guinea fowl, breast  Anu ogaxi (Igbo), Eran awo (Yoruba) Numida spp.",
+      "guinea fowl, breast, Anu ogaxi (Igbo), Eran awo (Yoruba) Numida spp., meat",
   },
   {
     Id: 196,
@@ -6148,7 +6148,7 @@ export const foodData = [
     Na_mg: "540",
     THIA_mg: "0.15",
     RIBF_mg: "0.26",
-    SearchName: "guinea fowl, thigh  Eran awo (Yoruba)",
+    SearchName: "guinea fowl, thigh  Eran awo (Yoruba), meat",
   },
   {
     Id: 197,
@@ -6168,7 +6168,7 @@ export const foodData = [
     Ca_mg: "11",
     Fe_mg: "1.8",
     P_mg: "174",
-    SearchName: "Pork, moderate fat  Elede (Yoruba) Sus scrofa",
+    SearchName: "Pork, moderate fat  Elede (Yoruba) Sus scrofa, meat",
   },
   {
     Id: 198,
@@ -6193,7 +6193,7 @@ export const foodData = [
     Zn_mg: "2.25",
     Cu_mg: "0.3",
     Mn_mg: "0.61",
-    SearchName: "Pork, salted, dried, and boiled",
+    SearchName: "Pork, salted, dried, and boiled, meat",
   },
   {
     Id: 199,
@@ -6261,7 +6261,7 @@ export const foodData = [
     FOL_mcg: "6",
     VITB12_mcg: "0.36",
     VITC_mg: "2.3",
-    SearchName: "Quail,  Cooked, total edible",
+    SearchName: "Quail,  Cooked, total edible, meat, poultry",
   },
   {
     Id: 201,
@@ -6293,7 +6293,7 @@ export const foodData = [
     FOL_mcg: "8",
     VITB12_mcg: "7.16",
     SearchName:
-      "Rabbit,  Domesticated, composite of cuts, raw   Oryctolagus cuniculus",
+      "Rabbit,  Domesticated, composite of cuts, raw   Oryctolagus cuniculus, meat, poultry",
   },
   {
     Id: 202,
@@ -6327,7 +6327,7 @@ export const foodData = [
     VIT_B6_mg: "0.13",
     FOL_mcg: "6",
     VITB12_mcg: "0.5",
-    SearchName: "Snail,  Raw   Cornu aspersum",
+    SearchName: "Snail,  Raw   Cornu aspersum, meat",
   },
   {
     Id: 203,
@@ -6363,7 +6363,8 @@ export const foodData = [
     VIT_B6_mg: "0.599",
     FOL_mcg: "7",
     VITB12_mcg: "1.22",
-    SearchName: "Turkey,   Whole,meat and skin, raw   Meleagris gallopavo",
+    SearchName:
+      "Turkey,   Whole, meat and skin, raw   Meleagris gallopavo, poultry",
   },
   {
     Id: 204,
@@ -6398,7 +6399,7 @@ export const foodData = [
     FOL_mcg: "6",
     VITB12_mcg: "3.61",
     VITC_mg: "6.2",
-    SearchName: "Turkey,Gizzard,Raw",
+    SearchName: "Turkey, Gizzard, Raw, meat, poultry",
   },
   {
     Id: 205,
@@ -6434,7 +6435,7 @@ export const foodData = [
     VIT_B6_mg: "0.479",
     VITB12_mcg: "13.3",
     VITC_mg: "3",
-    SearchName: "Turkey,Heart,raw",
+    SearchName: "Turkey,Heart,raw, meat, poultry",
   },
   {
     Id: 206,
@@ -6470,7 +6471,7 @@ export const foodData = [
     FOL_mcg: "677",
     VITB12_mcg: "19.73",
     VITC_mg: "24.5",
-    SearchName: "Turkey,Liver, raw",
+    SearchName: "Turkey,Liver, raw, meat, poultry",
   },
   {
     Id: 207,
@@ -6509,7 +6510,7 @@ export const foodData = [
     FOL_mcg: "47",
     VITB12_mcg: "1.295",
     SearchName:
-      "Chicken, Egg, Whole, raw, Fresh  Kwayin kaza(Hausa), Akwa okuko(Igbo), Eyin adiye(Yoruba), Nkwa unen(Ibibio)",
+      "Chicken, Egg, Whole, raw, Fresh  Kwayin kaza(Hausa), Akwa okuko(Igbo), Eyin adiye(Yoruba), Nkwa unen(Ibibio), poultry",
   },
   {
     Id: 208,
@@ -6539,7 +6540,7 @@ export const foodData = [
     NIAEQ_mg: "0.105",
     VIT_B6_mg: "0.005",
     FOL_mcg: "4",
-    SearchName: "Chicken, Egg white, raw, fresh",
+    SearchName: "Chicken, Egg white, raw, fresh, poultry",
   },
   {
     Id: 209,
@@ -6574,7 +6575,7 @@ export const foodData = [
     VIT_B6_mg: "0.35",
     FOL_mcg: "146",
     VITB12_mcg: "1.95",
-    SearchName: "Chicken, Eggyolk,raw, fresh",
+    SearchName: "Chicken, Eggyolk,raw, fresh, poultry",
   },
   {
     Id: 210,
@@ -6610,7 +6611,7 @@ export const foodData = [
     VIT_B6_mg: "0.121",
     FOL_mcg: "44",
     VITB12_mcg: "1.11",
-    SearchName: "Chicken, Egg, whole cooked, hard boiled",
+    SearchName: "Chicken, Egg, whole cooked, hard boiled, poultry",
   },
   {
     Id: 211,
@@ -6649,7 +6650,7 @@ export const foodData = [
     FOL_mcg: "80",
     VITB12_mcg: "5.74",
     SearchName:
-      "Duck, Egg, Whole, fresh, raw  Kwoi agwagwa(Hausa), Akwa ubagwu(Igbo), Eyin pepeye(Yoruba), Nkwa unen mbakaka(Ibibio)",
+      "Duck, Egg, Whole, fresh, raw  Kwoi agwagwa(Hausa), Akwa ubagwu(Igbo), Eyin pepeye(Yoruba), Nkwa unen mbakaka(Ibibio), poultry",
   },
   {
     Id: 212,
@@ -6687,7 +6688,7 @@ export const foodData = [
     FOL_mcg: "66",
     VITB12_mcg: "1.58",
     SearchName:
-      "Quail, Egg, Whole, fresh, raw  Kwoi Barbawa(Hausa), Eyin aparo(Yoruba)",
+      "Quail, Egg, Whole, fresh, raw  Kwoi Barbawa(Hausa), Eyin aparo(Yoruba), poultry",
   },
   {
     Id: 213,
@@ -6709,7 +6710,7 @@ export const foodData = [
     K_mg: "184",
     Na_mg: "189",
     Zn_mg: "2.3",
-    SearchName: "Egg,quail,boiled without salt",
+    SearchName: "Egg,quail,boiled without salt, poultry",
   },
   {
     Id: 214,
@@ -6745,7 +6746,7 @@ export const foodData = [
     FOL_mcg: "71",
     VITB12_mcg: "1.69",
     SearchName:
-      "Turkey, Egg,Whole, fresh, raw  Kwoi tolotolo(Hausa), Akwa torotoro(Igbo), Eyin tolotolo(Yoruba), Nsen-turkey (Efik)",
+      "Turkey, Egg,Whole, fresh, raw  Kwoi tolotolo(Hausa), Akwa torotoro(Igbo), Eyin tolotolo(Yoruba), Nsen-turkey (Efik), poultry",
   },
   {
     Id: 215,
@@ -6767,7 +6768,7 @@ export const foodData = [
     K_mg: "274",
     Na_mg: "278.6",
     Zn_mg: "3.5",
-    SearchName: "Egg,turkey,boiled without salt",
+    SearchName: "Egg, turkey, boiled without salt, poultry",
   },
   {
     Id: 216,
@@ -6791,14 +6792,14 @@ export const foodData = [
     Na_mg: "250.1",
     Zn_mg: "2.8",
     SearchName:
-      "Egg,guinea fowl,raw  Eyin awo(Yoruba), Nsen-guinea fowl (Efik)",
+      "Egg,guinea fowl,raw  Eyin awo(Yoruba), Nsen-guinea fowl (Efik), poultry",
   },
   {
     Id: 217,
     REFID: "11",
     Code: "09_05_12",
     Category: "Egg and Products",
-    EnglishName: "Egg,guinea fowl,boiled without salt",
+    EnglishName: "Egg, guinea fowl, boiled without salt",
     Source: "201",
     ENERC_kJ: "1170.5",
     ENERC_kcal: "281",
@@ -6813,7 +6814,7 @@ export const foodData = [
     K_mg: "507.2",
     Na_mg: "333.8",
     Zn_mg: "3.6",
-    SearchName: "Egg,guinea fowl,boiled without salt",
+    SearchName: "Egg, guinea fowl, boiled without salt, poultry",
   },
   {
     Id: 218,
@@ -6847,7 +6848,7 @@ export const foodData = [
     VIT_B6_mg: "0.31",
     FOL_mcg: "9",
     VITB12_mcg: "2.1",
-    SearchName: "Barracuda,  Raw   Sphyraena  spp",
+    SearchName: "Barracuda,  Raw   Sphyraena  spp, fish",
   },
   {
     Id: 219,
@@ -6942,7 +6943,7 @@ export const foodData = [
     RIBF_mg: "1.63",
     VITC_mg: "19.24",
     SearchName:
-      "Catfish, Fresh, raw  Tarwada(Hausa), Eja abori(Yoruba), Iyak idin(Ibibio) Heteroclarias Spp",
+      "Catfish, Fresh, raw  Tarwada(Hausa), Eja abori(Yoruba), Iyak idin(Ibibio) Heteroclarias Spp, fish",
   },
   {
     Id: 222,
@@ -7028,7 +7029,7 @@ export const foodData = [
     THIA_mg: "1567",
     RIBF_mg: "1149",
     VITC_mg: "10",
-    SearchName: "Crayfish,Dried   Cambarus spp",
+    SearchName: "Crayfish, Dried   Cambarus spp",
   },
   {
     Id: 225,
@@ -7048,7 +7049,7 @@ export const foodData = [
     FIB_g: "2.43",
     ASH_g: "4.57",
     SearchName:
-      "Electric fish,flesh,raw  Iyak (Efik/Ibibio) Malapterurus electricus",
+      "Electric fish, flesh, raw  Iyak (Efik/Ibibio) Malapterurus electricus",
   },
   {
     Id: 226,
@@ -7074,7 +7075,7 @@ export const foodData = [
     THIA_mg: "0.1",
     RIBF_mg: "0.1",
     VITB12_mcg: "1",
-    SearchName: "Lobster, raw  Ukop(Ibibio) Jasus spp",
+    SearchName: "Lobster, raw  Ukop(Ibibio) Jasus spp, fish",
   },
   {
     Id: 227,
@@ -7122,7 +7123,7 @@ export const foodData = [
     Na_mg: "59",
     Zn_mg: "1.745",
     Cu_mg: "1.745",
-    SearchName: "Mackrel, Fresh,Raw  Alaran (Yoruba) Scomber scombrus",
+    SearchName: "Mackrel, Fresh, Raw  Alaran (Yoruba) Scomber scombrus, fish",
   },
   {
     Id: 229,
@@ -7145,7 +7146,7 @@ export const foodData = [
     THIA_mg: "0.07",
     RIBF_mg: "0.28",
     VITB12_mcg: "9",
-    SearchName: "Mackerel, fried, with bones",
+    SearchName: "Mackerel, fried, with bones, fish",
   },
   {
     Id: 230,
@@ -7193,7 +7194,7 @@ export const foodData = [
     P_mg: "102.67",
     Zn_mg: "1.22",
     SearchName:
-      "Prawn,whole,raw  Oporo(Igbo), Ede-nla(Yoruba), Obu-ekem (Efik) Macrobrachium vollenhovenii",
+      "Prawn, whole, raw  Oporo(Igbo), Ede-nla(Yoruba), Obu-ekem (Efik) Macrobrachium vollenhovenii, fish",
   },
   {
     Id: 232,
@@ -7230,7 +7231,7 @@ export const foodData = [
     FOL_mcg: "4",
     VITB12_mcg: "11",
     SearchName:
-      "Sardine, Fresh, raw  Kifin sardine(Hausa), Azu eke(Igbo), Ibat(Ibibio) Sardina spp",
+      "Sardine, Fresh, raw  Kifin sardine(Hausa), Azu eke(Igbo), Ibat(Ibibio) Sardina spp, fish",
   },
   {
     Id: 233,
@@ -7292,7 +7293,7 @@ export const foodData = [
     FOL_mcg: "24",
     VITB12_mcg: "1.58",
     SearchName:
-      "Tilapia, Fresh, raw  Karfasa(Hausa), Iyak (Efik/Ibibio) Tilapia guineensis",
+      "Tilapia, Fresh, raw  Karfasa(Hausa), Iyak (Efik/Ibibio) Tilapia guineensis, fish",
   },
   {
     Id: 235,
@@ -7321,7 +7322,7 @@ export const foodData = [
     VIT_B6_mg: "0.123",
     FOL_mcg: "6",
     VITB12_mcg: "1.86",
-    SearchName: "Tilapia, Cooked, dry heat",
+    SearchName: "Tilapia, Cooked, dry heat, fish",
   },
   {
     Id: 236,
@@ -7356,7 +7357,7 @@ export const foodData = [
     VIT_B6_mg: "0.69",
     FOL_mcg: "15",
     VITB12_mcg: "5.1",
-    SearchName: "Tuna, Raw  Kote(Yoruba) Thunnini spp",
+    SearchName: "Tuna, Raw  Kote(Yoruba) Thunnini spp, fish",
   },
   {
     Id: 237,
@@ -7479,7 +7480,7 @@ export const foodData = [
     Fe_mg: "50.2",
     Zn_mg: "4.12",
     Cu_mg: "2.75",
-    SearchName: "Fura  Fura nono(Hausa)",
+    SearchName: "Fura  Fura nono(Hausa), local cheese, traditional cheese",
   },
   {
     Id: 242,
@@ -7501,7 +7502,7 @@ export const foodData = [
     P_mg: "115",
     K_mg: "286",
     Na_mg: "17",
-    SearchName: "Traditional fura powder",
+    SearchName: "Traditional fura powder, local",
   },
   {
     Id: 243,
